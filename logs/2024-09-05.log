@@ -1,0 +1,266 @@
+[qq-pd-group][Normal][09/05-21:48:03:043]=>can't load extension(s) [io.github.kloping.little_web.WebExtension, io.github.kloping.spt.SptRedis]
+[qq-pd-group][Info]  [09/05-21:48:03:146]=>version 0.6.3-L1 sptool start success
+[qq-pd-group][Normal][09/05-21:48:03:147]=>autoStand contextManager in Start0
+[qq-pd-group][Normal][09/05-21:48:03:147]=>计时任务结束...
+[qq-pd-group][Normal][09/05-21:48:03:147]=>autoStand authV2Base in Start0
+[qq-pd-group][Normal][09/05-21:48:03:148]=>autoStand contextManager in WssWorker
+[qq-pd-group][Normal][09/05-21:48:03:148]=>autoStand botBase in WssWorker
+[qq-pd-group][Normal][09/05-21:48:03:148]=>autoStand logger in WssWorker
+[qq-pd-group][Normal][09/05-21:48:03:148]=>autoStand config in WssWorker
+[qq-pd-group][Normal][09/05-21:48:03:148]=>autoStand bot in GroupRobotEventRegister
+[qq-pd-group][Normal][09/05-21:48:03:148]=>autoStand logger in Bot
+[qq-pd-group][Normal][09/05-21:48:03:148]=>autoStand interActionBase in Bot
+[qq-pd-group][Normal][09/05-21:48:03:148]=>autoStand guildBase in Bot
+[qq-pd-group][Normal][09/05-21:48:03:149]=>autoStand userBase in Bot
+[qq-pd-group][Normal][09/05-21:48:03:149]=>autoStand channelBase in Bot
+[qq-pd-group][Normal][09/05-21:48:03:149]=>autoStand dmsBase in Bot
+[qq-pd-group][Normal][09/05-21:48:03:149]=>autoStand messageBase in Bot
+[qq-pd-group][Normal][09/05-21:48:03:149]=>autoStand memberBase in Bot
+[qq-pd-group][Normal][09/05-21:48:03:149]=>autoStand groupBaseV2 in Bot
+[qq-pd-group][Normal][09/05-21:48:03:149]=>autoStand userBaseV2 in Bot
+[qq-pd-group][Normal][09/05-21:48:03:149]=>autoStand authV2Base in Bot
+[qq-pd-group][Normal][09/05-21:48:03:150]=>autoStand config in Bot
+[qq-pd-group][Normal][09/05-21:48:03:150]=>autoStand logger in HttpClientConfig
+[qq-pd-group][Normal][09/05-21:48:03:150]=>autoStand bot in HttpClientConfig
+[qq-pd-group][Normal][09/05-21:48:03:150]=>autoStand config in Events
+[qq-pd-group][Normal][09/05-21:48:03:150]=>autoStand logger in Events
+[qq-pd-group][Normal][09/05-21:48:03:150]=>autoStand bot in Events
+[qq-pd-group][Normal][09/05-21:48:03:150]=>autoStand bot in ChannelEventsRegister
+[qq-pd-group][Normal][09/05-21:48:03:150]=>autoStand bot in InterActionEventRegister
+[qq-pd-group][Normal][09/05-21:48:03:150]=>autoStand logger in InterActionEventRegister
+[qq-pd-group][Normal][09/05-21:48:03:150]=>autoStand logger in AuthAndHeartbeat
+[qq-pd-group][Normal][09/05-21:48:03:152]=>autoStand contextManager in AuthAndHeartbeat
+[qq-pd-group][Normal][09/05-21:48:03:152]=>autoStand wssWorker in AuthAndHeartbeat
+[qq-pd-group][Normal][09/05-21:48:03:152]=>autoStand config in AuthAndHeartbeat
+[qq-pd-group][Normal][09/05-21:48:03:152]=>autoStand bot in AuthAndHeartbeat
+[qq-pd-group][Normal][09/05-21:48:03:152]=>autoStand bot in MemberEventRegisters
+[qq-pd-group][Normal][09/05-21:48:03:152]=>autoStand bot in FriendEventsRegister
+[qq-pd-group][Normal][09/05-21:48:03:152]=>autoStand bot in MessageDeleteEventRegister
+[qq-pd-group][Normal][09/05-21:48:03:152]=>autoStand bot in GuildEventsRegister
+[qq-pd-group][Normal][09/05-21:48:03:152]=>autoStand logger in GuildEventsRegister
+[qq-pd-group][Normal][09/05-21:48:03:152]=>autoStand bot in GroupEventsRegister
+[qq-pd-group][Normal][09/05-21:48:03:152]=>autoStand logger in GroupEventsRegister
+[qq-pd-group][Normal][09/05-21:48:03:153]=>autoStand bot in MessageReactionEventRegister
+[qq-pd-group][Normal][09/05-21:48:03:153]=>autoStand bot in MessageEventsRegister
+[qq-pd-group][Error] [09/05-21:48:03:759]=>HTTP error fetching URL. Status=401, URL=[https://api.sgroup.qq.com/gateway]
+[qq-pd-group][Normal][09/05-21:48:03:873]=>Use the (GET) method through the (BotBase) interface to request the data obtained by the response code of the (https://api.sgroup.qq.com/gateway) URL is (401), and ({"message":"接口访问源IP不在白名单","code":11298,"err_code":40023002,"trace_id":"90b5a1c5c0dac6f2bf58e9711882d3ee"}) may be converted to (UrlPack{url='null'}) type Will be processed and filtered
+[qq-pd-group][Error] [09/05-21:48:03:874]=>在WebSocketClient启动时失败
+[qq-pd-group][Normal][09/05-21:48:10:514]=>can't load extension(s) [io.github.kloping.little_web.WebExtension, io.github.kloping.spt.SptRedis]
+[qq-pd-group][Info]  [09/05-21:48:10:613]=>version 0.6.3-L1 sptool start success
+[qq-pd-group][Normal][09/05-21:48:10:614]=>autoStand contextManager in Start0
+[qq-pd-group][Normal][09/05-21:48:10:614]=>计时任务结束...
+[qq-pd-group][Normal][09/05-21:48:10:614]=>autoStand authV2Base in Start0
+[qq-pd-group][Normal][09/05-21:48:10:614]=>autoStand contextManager in WssWorker
+[qq-pd-group][Normal][09/05-21:48:10:614]=>autoStand botBase in WssWorker
+[qq-pd-group][Normal][09/05-21:48:10:615]=>autoStand logger in WssWorker
+[qq-pd-group][Normal][09/05-21:48:10:615]=>autoStand config in WssWorker
+[qq-pd-group][Normal][09/05-21:48:10:615]=>autoStand bot in GroupRobotEventRegister
+[qq-pd-group][Normal][09/05-21:48:10:615]=>autoStand logger in Bot
+[qq-pd-group][Normal][09/05-21:48:10:615]=>autoStand interActionBase in Bot
+[qq-pd-group][Normal][09/05-21:48:10:615]=>autoStand guildBase in Bot
+[qq-pd-group][Normal][09/05-21:48:10:615]=>autoStand userBase in Bot
+[qq-pd-group][Normal][09/05-21:48:10:616]=>autoStand channelBase in Bot
+[qq-pd-group][Normal][09/05-21:48:10:616]=>autoStand dmsBase in Bot
+[qq-pd-group][Normal][09/05-21:48:10:616]=>autoStand messageBase in Bot
+[qq-pd-group][Normal][09/05-21:48:10:616]=>autoStand memberBase in Bot
+[qq-pd-group][Normal][09/05-21:48:10:616]=>autoStand groupBaseV2 in Bot
+[qq-pd-group][Normal][09/05-21:48:10:616]=>autoStand userBaseV2 in Bot
+[qq-pd-group][Normal][09/05-21:48:10:616]=>autoStand authV2Base in Bot
+[qq-pd-group][Normal][09/05-21:48:10:616]=>autoStand config in Bot
+[qq-pd-group][Normal][09/05-21:48:10:617]=>autoStand logger in HttpClientConfig
+[qq-pd-group][Normal][09/05-21:48:10:617]=>autoStand bot in HttpClientConfig
+[qq-pd-group][Normal][09/05-21:48:10:617]=>autoStand config in Events
+[qq-pd-group][Normal][09/05-21:48:10:617]=>autoStand logger in Events
+[qq-pd-group][Normal][09/05-21:48:10:617]=>autoStand bot in Events
+[qq-pd-group][Normal][09/05-21:48:10:617]=>autoStand bot in ChannelEventsRegister
+[qq-pd-group][Normal][09/05-21:48:10:617]=>autoStand bot in InterActionEventRegister
+[qq-pd-group][Normal][09/05-21:48:10:617]=>autoStand logger in InterActionEventRegister
+[qq-pd-group][Normal][09/05-21:48:10:617]=>autoStand logger in AuthAndHeartbeat
+[qq-pd-group][Normal][09/05-21:48:10:617]=>autoStand contextManager in AuthAndHeartbeat
+[qq-pd-group][Normal][09/05-21:48:10:618]=>autoStand wssWorker in AuthAndHeartbeat
+[qq-pd-group][Normal][09/05-21:48:10:618]=>autoStand config in AuthAndHeartbeat
+[qq-pd-group][Normal][09/05-21:48:10:618]=>autoStand bot in AuthAndHeartbeat
+[qq-pd-group][Normal][09/05-21:48:10:618]=>autoStand bot in MemberEventRegisters
+[qq-pd-group][Normal][09/05-21:48:10:618]=>autoStand bot in FriendEventsRegister
+[qq-pd-group][Normal][09/05-21:48:10:618]=>autoStand bot in MessageDeleteEventRegister
+[qq-pd-group][Normal][09/05-21:48:10:618]=>autoStand bot in GuildEventsRegister
+[qq-pd-group][Normal][09/05-21:48:10:618]=>autoStand logger in GuildEventsRegister
+[qq-pd-group][Normal][09/05-21:48:10:618]=>autoStand bot in GroupEventsRegister
+[qq-pd-group][Normal][09/05-21:48:10:618]=>autoStand logger in GroupEventsRegister
+[qq-pd-group][Normal][09/05-21:48:10:619]=>autoStand bot in MessageReactionEventRegister
+[qq-pd-group][Normal][09/05-21:48:10:619]=>autoStand bot in MessageEventsRegister
+[qq-pd-group][Error] [09/05-21:48:11:104]=>HTTP error fetching URL. Status=401, URL=[https://api.sgroup.qq.com/gateway]
+[qq-pd-group][Normal][09/05-21:48:11:203]=>Use the (GET) method through the (BotBase) interface to request the data obtained by the response code of the (https://api.sgroup.qq.com/gateway) URL is (401), and ({"message":"接口访问源IP不在白名单","code":11298,"err_code":40023002,"trace_id":"088763bc1e6a9de3cfd647d1f5adfd94"}) may be converted to (UrlPack{url='null'}) type Will be processed and filtered
+[qq-pd-group][Error] [09/05-21:48:11:204]=>在WebSocketClient启动时失败
+[qq-pd-group][Error] [09/05-21:48:21:409]=>HTTP error fetching URL. Status=401, URL=[https://api.sgroup.qq.com/gateway]
+[qq-pd-group][Normal][09/05-21:48:21:409]=>Use the (GET) method through the (BotBase) interface to request the data obtained by the response code of the (https://api.sgroup.qq.com/gateway) URL is (401), and ({"message":"接口访问源IP不在白名单","code":11298,"err_code":40023002,"trace_id":"160b693d6adcc66163903faa9de598f8"}) may be converted to (UrlPack{url='null'}) type Will be processed and filtered
+[qq-pd-group][Error] [09/05-21:48:21:410]=>在WebSocketClient启动时失败
+[qq-pd-group][Error] [09/05-21:48:31:593]=>HTTP error fetching URL. Status=401, URL=[https://api.sgroup.qq.com/gateway]
+[qq-pd-group][Normal][09/05-21:48:31:594]=>Use the (GET) method through the (BotBase) interface to request the data obtained by the response code of the (https://api.sgroup.qq.com/gateway) URL is (401), and ({"message":"接口访问源IP不在白名单","code":11298,"err_code":40023002,"trace_id":"c058f3ad1482224be07590bb808b4bd1"}) may be converted to (UrlPack{url='null'}) type Will be processed and filtered
+[qq-pd-group][Error] [09/05-21:48:31:594]=>在WebSocketClient启动时失败
+[qq-pd-group][Normal][09/05-22:23:09:469]=>can't load extension(s) [io.github.kloping.little_web.WebExtension, io.github.kloping.spt.SptRedis]
+[qq-pd-group][Info]  [09/05-22:23:09:567]=>version 0.6.3-L1 sptool start success
+[qq-pd-group][Normal][09/05-22:23:09:568]=>autoStand contextManager in Start0
+[qq-pd-group][Normal][09/05-22:23:09:568]=>计时任务结束...
+[qq-pd-group][Normal][09/05-22:23:09:569]=>autoStand authV2Base in Start0
+[qq-pd-group][Normal][09/05-22:23:09:569]=>autoStand contextManager in WssWorker
+[qq-pd-group][Normal][09/05-22:23:09:569]=>autoStand botBase in WssWorker
+[qq-pd-group][Normal][09/05-22:23:09:569]=>autoStand logger in WssWorker
+[qq-pd-group][Normal][09/05-22:23:09:569]=>autoStand config in WssWorker
+[qq-pd-group][Normal][09/05-22:23:09:569]=>autoStand bot in GroupRobotEventRegister
+[qq-pd-group][Normal][09/05-22:23:09:570]=>autoStand logger in Bot
+[qq-pd-group][Normal][09/05-22:23:09:570]=>autoStand interActionBase in Bot
+[qq-pd-group][Normal][09/05-22:23:09:570]=>autoStand guildBase in Bot
+[qq-pd-group][Normal][09/05-22:23:09:570]=>autoStand userBase in Bot
+[qq-pd-group][Normal][09/05-22:23:09:570]=>autoStand channelBase in Bot
+[qq-pd-group][Normal][09/05-22:23:09:570]=>autoStand dmsBase in Bot
+[qq-pd-group][Normal][09/05-22:23:09:570]=>autoStand messageBase in Bot
+[qq-pd-group][Normal][09/05-22:23:09:570]=>autoStand memberBase in Bot
+[qq-pd-group][Normal][09/05-22:23:09:571]=>autoStand groupBaseV2 in Bot
+[qq-pd-group][Normal][09/05-22:23:09:571]=>autoStand userBaseV2 in Bot
+[qq-pd-group][Normal][09/05-22:23:09:571]=>autoStand authV2Base in Bot
+[qq-pd-group][Normal][09/05-22:23:09:571]=>autoStand config in Bot
+[qq-pd-group][Normal][09/05-22:23:09:571]=>autoStand logger in HttpClientConfig
+[qq-pd-group][Normal][09/05-22:23:09:571]=>autoStand bot in HttpClientConfig
+[qq-pd-group][Normal][09/05-22:23:09:571]=>autoStand config in Events
+[qq-pd-group][Normal][09/05-22:23:09:571]=>autoStand logger in Events
+[qq-pd-group][Normal][09/05-22:23:09:571]=>autoStand bot in Events
+[qq-pd-group][Normal][09/05-22:23:09:572]=>autoStand bot in ChannelEventsRegister
+[qq-pd-group][Normal][09/05-22:23:09:572]=>autoStand bot in InterActionEventRegister
+[qq-pd-group][Normal][09/05-22:23:09:572]=>autoStand logger in InterActionEventRegister
+[qq-pd-group][Normal][09/05-22:23:09:572]=>autoStand logger in AuthAndHeartbeat
+[qq-pd-group][Normal][09/05-22:23:09:572]=>autoStand contextManager in AuthAndHeartbeat
+[qq-pd-group][Normal][09/05-22:23:09:572]=>autoStand wssWorker in AuthAndHeartbeat
+[qq-pd-group][Normal][09/05-22:23:09:572]=>autoStand config in AuthAndHeartbeat
+[qq-pd-group][Normal][09/05-22:23:09:573]=>autoStand bot in AuthAndHeartbeat
+[qq-pd-group][Normal][09/05-22:23:09:573]=>autoStand bot in MemberEventRegisters
+[qq-pd-group][Normal][09/05-22:23:09:573]=>autoStand bot in FriendEventsRegister
+[qq-pd-group][Normal][09/05-22:23:09:573]=>autoStand bot in MessageDeleteEventRegister
+[qq-pd-group][Normal][09/05-22:23:09:573]=>autoStand bot in GuildEventsRegister
+[qq-pd-group][Normal][09/05-22:23:09:573]=>autoStand logger in GuildEventsRegister
+[qq-pd-group][Normal][09/05-22:23:09:573]=>autoStand bot in GroupEventsRegister
+[qq-pd-group][Normal][09/05-22:23:09:573]=>autoStand logger in GroupEventsRegister
+[qq-pd-group][Normal][09/05-22:23:09:573]=>autoStand bot in MessageReactionEventRegister
+[qq-pd-group][Normal][09/05-22:23:09:574]=>autoStand bot in MessageEventsRegister
+[qq-pd-group][Error] [09/05-22:23:10:352]=>HTTP error fetching URL. Status=401, URL=[https://api.sgroup.qq.com/gateway]
+[qq-pd-group][Normal][09/05-22:23:10:460]=>Use the (GET) method through the (BotBase) interface to request the data obtained by the response code of the (https://api.sgroup.qq.com/gateway) URL is (401), and ({"message":"接口访问源IP不在白名单","code":11298,"err_code":40023002,"trace_id":"69f950d7f76d5f9569b7edc46dbb1c7b"}) may be converted to (UrlPack{url='null'}) type Will be processed and filtered
+[qq-pd-group][Error] [09/05-22:23:10:461]=>在WebSocketClient启动时失败
+[qq-pd-group][Error] [09/05-22:23:20:796]=>HTTP error fetching URL. Status=401, URL=[https://api.sgroup.qq.com/gateway]
+[qq-pd-group][Normal][09/05-22:23:20:796]=>Use the (GET) method through the (BotBase) interface to request the data obtained by the response code of the (https://api.sgroup.qq.com/gateway) URL is (401), and ({"message":"接口访问源IP不在白名单","code":11298,"err_code":40023002,"trace_id":"dba6a4081a4630a525e682ac56c9cc3a"}) may be converted to (UrlPack{url='null'}) type Will be processed and filtered
+[qq-pd-group][Error] [09/05-22:23:20:797]=>在WebSocketClient启动时失败
+[qq-pd-group][Error] [09/05-22:23:31:123]=>HTTP error fetching URL. Status=401, URL=[https://api.sgroup.qq.com/gateway]
+[qq-pd-group][Normal][09/05-22:23:31:123]=>Use the (GET) method through the (BotBase) interface to request the data obtained by the response code of the (https://api.sgroup.qq.com/gateway) URL is (401), and ({"message":"接口访问源IP不在白名单","code":11298,"err_code":40023002,"trace_id":"b247e57aa7c1e84c25bf596575426811"}) may be converted to (UrlPack{url='null'}) type Will be processed and filtered
+[qq-pd-group][Error] [09/05-22:23:31:124]=>在WebSocketClient启动时失败
+[qq-pd-group][Error] [09/05-22:23:41:483]=>HTTP error fetching URL. Status=401, URL=[https://api.sgroup.qq.com/gateway]
+[qq-pd-group][Normal][09/05-22:23:41:483]=>Use the (GET) method through the (BotBase) interface to request the data obtained by the response code of the (https://api.sgroup.qq.com/gateway) URL is (401), and ({"message":"接口访问源IP不在白名单","code":11298,"err_code":40023002,"trace_id":"403644efb5def3ff01a10a10ffdbb108"}) may be converted to (UrlPack{url='null'}) type Will be processed and filtered
+[qq-pd-group][Error] [09/05-22:23:41:484]=>在WebSocketClient启动时失败
+[qq-pd-group][Error] [09/05-22:23:51:806]=>HTTP error fetching URL. Status=401, URL=[https://api.sgroup.qq.com/gateway]
+[qq-pd-group][Normal][09/05-22:23:51:806]=>Use the (GET) method through the (BotBase) interface to request the data obtained by the response code of the (https://api.sgroup.qq.com/gateway) URL is (401), and ({"message":"接口访问源IP不在白名单","code":11298,"err_code":40023002,"trace_id":"9212e96226edaa8dcf1fe864655d74ef"}) may be converted to (UrlPack{url='null'}) type Will be processed and filtered
+[qq-pd-group][Error] [09/05-22:23:51:807]=>在WebSocketClient启动时失败
+[qq-pd-group][Error] [09/05-22:24:02:080]=>HTTP error fetching URL. Status=401, URL=[https://api.sgroup.qq.com/gateway]
+[qq-pd-group][Normal][09/05-22:24:02:081]=>Use the (GET) method through the (BotBase) interface to request the data obtained by the response code of the (https://api.sgroup.qq.com/gateway) URL is (401), and ({"message":"接口访问源IP不在白名单","code":11298,"err_code":40023002,"trace_id":"4e3ed582e6a62f172212d46237b070c8"}) may be converted to (UrlPack{url='null'}) type Will be processed and filtered
+[qq-pd-group][Error] [09/05-22:24:02:081]=>在WebSocketClient启动时失败
+[qq-pd-group][Error] [09/05-22:24:12:454]=>HTTP error fetching URL. Status=401, URL=[https://api.sgroup.qq.com/gateway]
+[qq-pd-group][Normal][09/05-22:24:12:455]=>Use the (GET) method through the (BotBase) interface to request the data obtained by the response code of the (https://api.sgroup.qq.com/gateway) URL is (401), and ({"message":"接口访问源IP不在白名单","code":11298,"err_code":40023002,"trace_id":"5a43d2c76ffcdec0cc2eead52f8d592f"}) may be converted to (UrlPack{url='null'}) type Will be processed and filtered
+[qq-pd-group][Error] [09/05-22:24:12:455]=>在WebSocketClient启动时失败
+[qq-pd-group][Error] [09/05-22:24:22:646]=>HTTP error fetching URL. Status=401, URL=[https://api.sgroup.qq.com/gateway]
+[qq-pd-group][Normal][09/05-22:24:22:646]=>Use the (GET) method through the (BotBase) interface to request the data obtained by the response code of the (https://api.sgroup.qq.com/gateway) URL is (401), and ({"message":"接口访问源IP不在白名单","code":11298,"err_code":40023002,"trace_id":"0734eba2f0d0b7cde21c97e6e1e538d9"}) may be converted to (UrlPack{url='null'}) type Will be processed and filtered
+[qq-pd-group][Error] [09/05-22:24:22:646]=>在WebSocketClient启动时失败
+[qq-pd-group][Error] [09/05-22:24:32:889]=>HTTP error fetching URL. Status=401, URL=[https://api.sgroup.qq.com/gateway]
+[qq-pd-group][Normal][09/05-22:24:32:889]=>Use the (GET) method through the (BotBase) interface to request the data obtained by the response code of the (https://api.sgroup.qq.com/gateway) URL is (401), and ({"message":"接口访问源IP不在白名单","code":11298,"err_code":40023002,"trace_id":"6ca4c3391180af620e382b9a124fa49c"}) may be converted to (UrlPack{url='null'}) type Will be processed and filtered
+[qq-pd-group][Error] [09/05-22:24:32:889]=>在WebSocketClient启动时失败
+[qq-pd-group][Error] [09/05-22:24:43:114]=>HTTP error fetching URL. Status=401, URL=[https://api.sgroup.qq.com/gateway]
+[qq-pd-group][Normal][09/05-22:24:43:114]=>Use the (GET) method through the (BotBase) interface to request the data obtained by the response code of the (https://api.sgroup.qq.com/gateway) URL is (401), and ({"message":"接口访问源IP不在白名单","code":11298,"err_code":40023002,"trace_id":"90ca395b9c89485fbd9929cbe9c38524"}) may be converted to (UrlPack{url='null'}) type Will be processed and filtered
+[qq-pd-group][Error] [09/05-22:24:43:114]=>在WebSocketClient启动时失败
+[qq-pd-group][Error] [09/05-22:24:53:319]=>HTTP error fetching URL. Status=401, URL=[https://api.sgroup.qq.com/gateway]
+[qq-pd-group][Normal][09/05-22:24:53:322]=>Use the (GET) method through the (BotBase) interface to request the data obtained by the response code of the (https://api.sgroup.qq.com/gateway) URL is (401), and ({"message":"接口访问源IP不在白名单","code":11298,"err_code":40023002,"trace_id":"01168389dd56ceaa2ce141f63fc1dc87"}) may be converted to (UrlPack{url='null'}) type Will be processed and filtered
+[qq-pd-group][Error] [09/05-22:24:53:322]=>在WebSocketClient启动时失败
+[qq-pd-group][Error] [09/05-22:25:03:558]=>HTTP error fetching URL. Status=401, URL=[https://api.sgroup.qq.com/gateway]
+[qq-pd-group][Normal][09/05-22:25:03:558]=>Use the (GET) method through the (BotBase) interface to request the data obtained by the response code of the (https://api.sgroup.qq.com/gateway) URL is (401), and ({"message":"接口访问源IP不在白名单","code":11298,"err_code":40023002,"trace_id":"26e98c65b2badf268ac41720f3748dd9"}) may be converted to (UrlPack{url='null'}) type Will be processed and filtered
+[qq-pd-group][Error] [09/05-22:25:03:559]=>在WebSocketClient启动时失败
+[qq-pd-group][Error] [09/05-22:25:13:781]=>HTTP error fetching URL. Status=401, URL=[https://api.sgroup.qq.com/gateway]
+[qq-pd-group][Normal][09/05-22:25:13:781]=>Use the (GET) method through the (BotBase) interface to request the data obtained by the response code of the (https://api.sgroup.qq.com/gateway) URL is (401), and ({"message":"接口访问源IP不在白名单","code":11298,"err_code":40023002,"trace_id":"4cc7918678948aa750721182e9e3fc33"}) may be converted to (UrlPack{url='null'}) type Will be processed and filtered
+[qq-pd-group][Error] [09/05-22:25:13:781]=>在WebSocketClient启动时失败
+[qq-pd-group][Error] [09/05-22:25:23:985]=>HTTP error fetching URL. Status=401, URL=[https://api.sgroup.qq.com/gateway]
+[qq-pd-group][Normal][09/05-22:25:23:985]=>Use the (GET) method through the (BotBase) interface to request the data obtained by the response code of the (https://api.sgroup.qq.com/gateway) URL is (401), and ({"message":"接口访问源IP不在白名单","code":11298,"err_code":40023002,"trace_id":"9f3ff14ad89ee58478c1d7e89be78467"}) may be converted to (UrlPack{url='null'}) type Will be processed and filtered
+[qq-pd-group][Error] [09/05-22:25:23:986]=>在WebSocketClient启动时失败
+[qq-pd-group][Error] [09/05-22:25:34:198]=>HTTP error fetching URL. Status=401, URL=[https://api.sgroup.qq.com/gateway]
+[qq-pd-group][Normal][09/05-22:25:34:198]=>Use the (GET) method through the (BotBase) interface to request the data obtained by the response code of the (https://api.sgroup.qq.com/gateway) URL is (401), and ({"message":"接口访问源IP不在白名单","code":11298,"err_code":40023002,"trace_id":"873176e819432a09eda480d094d2fee9"}) may be converted to (UrlPack{url='null'}) type Will be processed and filtered
+[qq-pd-group][Error] [09/05-22:25:34:198]=>在WebSocketClient启动时失败
+[qq-pd-group][Error] [09/05-22:25:44:400]=>HTTP error fetching URL. Status=401, URL=[https://api.sgroup.qq.com/gateway]
+[qq-pd-group][Normal][09/05-22:25:44:400]=>Use the (GET) method through the (BotBase) interface to request the data obtained by the response code of the (https://api.sgroup.qq.com/gateway) URL is (401), and ({"message":"接口访问源IP不在白名单","code":11298,"err_code":40023002,"trace_id":"d814f4007edd907a994f0ac5712296ee"}) may be converted to (UrlPack{url='null'}) type Will be processed and filtered
+[qq-pd-group][Error] [09/05-22:25:44:400]=>在WebSocketClient启动时失败
+[qq-pd-group][Error] [09/05-22:25:54:622]=>HTTP error fetching URL. Status=401, URL=[https://api.sgroup.qq.com/gateway]
+[qq-pd-group][Normal][09/05-22:25:54:623]=>Use the (GET) method through the (BotBase) interface to request the data obtained by the response code of the (https://api.sgroup.qq.com/gateway) URL is (401), and ({"message":"接口访问源IP不在白名单","code":11298,"err_code":40023002,"trace_id":"801d76008bb166b7c12c7beee8014f95"}) may be converted to (UrlPack{url='null'}) type Will be processed and filtered
+[qq-pd-group][Error] [09/05-22:25:54:623]=>在WebSocketClient启动时失败
+[qq-pd-group][Error] [09/05-22:26:04:834]=>HTTP error fetching URL. Status=401, URL=[https://api.sgroup.qq.com/gateway]
+[qq-pd-group][Normal][09/05-22:26:04:835]=>Use the (GET) method through the (BotBase) interface to request the data obtained by the response code of the (https://api.sgroup.qq.com/gateway) URL is (401), and ({"message":"接口访问源IP不在白名单","code":11298,"err_code":40023002,"trace_id":"477d1f11e5d674a48a55d5f11ddc66e8"}) may be converted to (UrlPack{url='null'}) type Will be processed and filtered
+[qq-pd-group][Error] [09/05-22:26:04:835]=>在WebSocketClient启动时失败
+[qq-pd-group][Error] [09/05-22:26:15:059]=>HTTP error fetching URL. Status=401, URL=[https://api.sgroup.qq.com/gateway]
+[qq-pd-group][Normal][09/05-22:26:15:060]=>Use the (GET) method through the (BotBase) interface to request the data obtained by the response code of the (https://api.sgroup.qq.com/gateway) URL is (401), and ({"message":"接口访问源IP不在白名单","code":11298,"err_code":40023002,"trace_id":"22ca9e51fdcf6416875de61d22b598ec"}) may be converted to (UrlPack{url='null'}) type Will be processed and filtered
+[qq-pd-group][Error] [09/05-22:26:15:060]=>在WebSocketClient启动时失败
+[qq-pd-group][Error] [09/05-22:26:25:244]=>HTTP error fetching URL. Status=401, URL=[https://api.sgroup.qq.com/gateway]
+[qq-pd-group][Normal][09/05-22:26:25:245]=>Use the (GET) method through the (BotBase) interface to request the data obtained by the response code of the (https://api.sgroup.qq.com/gateway) URL is (401), and ({"message":"接口访问源IP不在白名单","code":11298,"err_code":40023002,"trace_id":"b7957a133e7a568f6babe37a65678cc2"}) may be converted to (UrlPack{url='null'}) type Will be processed and filtered
+[qq-pd-group][Error] [09/05-22:26:25:245]=>在WebSocketClient启动时失败
+[qq-pd-group][Normal][09/05-22:26:35:475]=>Use the (GET) method through the (BotBase) interface to request the data obtained by the response code of the (https://api.sgroup.qq.com/gateway) URL is (200), and ({"url":"wss://api.sgroup.qq.com/websocket"}) may be converted to (UrlPack{url='wss://api.sgroup.qq.com/websocket'}) type Will be processed and filtered
+[qq-pd-group][Normal][09/05-22:26:35:475]=>ws url:wss://api.sgroup.qq.com/websocket
+[qq-pd-group][Info]  [09/05-22:26:35:723]=>wss opened
+[qq-pd-group][Normal][09/05-22:26:35:729]=>receive {"d":{"heartbeat_interval":41250},"op":10}
+[qq-pd-group][Info]  [09/05-22:26:35:729]=>Authentication
+[qq-pd-group][Normal][09/05-22:26:35:744]=>wss send: {"d":{"intents":1007162883,"shard":[0,1],"properties":{},"token":"Bot 102145937.ndTJajFSnzcUYjTKm7KwrPZd7DiD6EnZ"},"op":2}
+[qq-pd-group][Normal][09/05-22:26:35:816]=>receive {"op":9,"d":false}
+[qq-pd-group][Debug] [09/05-22:26:35:817]=>wss closed with code 4014 disallowed intents
+[qq-pd-group][Error] [09/05-22:26:35:817]=>无权限订阅事件
+[qq-pd-group][Normal][09/05-22:27:01:919]=>can't load extension(s) [io.github.kloping.little_web.WebExtension, io.github.kloping.spt.SptRedis]
+[qq-pd-group][Info]  [09/05-22:27:02:016]=>version 0.6.3-L1 sptool start success
+[qq-pd-group][Normal][09/05-22:27:02:017]=>autoStand contextManager in Start0
+[qq-pd-group][Normal][09/05-22:27:02:017]=>计时任务结束...
+[qq-pd-group][Normal][09/05-22:27:02:017]=>autoStand authV2Base in Start0
+[qq-pd-group][Normal][09/05-22:27:02:018]=>autoStand contextManager in WssWorker
+[qq-pd-group][Normal][09/05-22:27:02:018]=>autoStand botBase in WssWorker
+[qq-pd-group][Normal][09/05-22:27:02:018]=>autoStand logger in WssWorker
+[qq-pd-group][Normal][09/05-22:27:02:018]=>autoStand config in WssWorker
+[qq-pd-group][Normal][09/05-22:27:02:018]=>autoStand bot in GroupRobotEventRegister
+[qq-pd-group][Normal][09/05-22:27:02:018]=>autoStand logger in Bot
+[qq-pd-group][Normal][09/05-22:27:02:018]=>autoStand interActionBase in Bot
+[qq-pd-group][Normal][09/05-22:27:02:018]=>autoStand guildBase in Bot
+[qq-pd-group][Normal][09/05-22:27:02:019]=>autoStand userBase in Bot
+[qq-pd-group][Normal][09/05-22:27:02:019]=>autoStand channelBase in Bot
+[qq-pd-group][Normal][09/05-22:27:02:019]=>autoStand dmsBase in Bot
+[qq-pd-group][Normal][09/05-22:27:02:019]=>autoStand messageBase in Bot
+[qq-pd-group][Normal][09/05-22:27:02:019]=>autoStand memberBase in Bot
+[qq-pd-group][Normal][09/05-22:27:02:019]=>autoStand groupBaseV2 in Bot
+[qq-pd-group][Normal][09/05-22:27:02:019]=>autoStand userBaseV2 in Bot
+[qq-pd-group][Normal][09/05-22:27:02:019]=>autoStand authV2Base in Bot
+[qq-pd-group][Normal][09/05-22:27:02:020]=>autoStand config in Bot
+[qq-pd-group][Normal][09/05-22:27:02:020]=>autoStand logger in HttpClientConfig
+[qq-pd-group][Normal][09/05-22:27:02:020]=>autoStand bot in HttpClientConfig
+[qq-pd-group][Normal][09/05-22:27:02:020]=>autoStand config in Events
+[qq-pd-group][Normal][09/05-22:27:02:020]=>autoStand logger in Events
+[qq-pd-group][Normal][09/05-22:27:02:020]=>autoStand bot in Events
+[qq-pd-group][Normal][09/05-22:27:02:021]=>autoStand bot in ChannelEventsRegister
+[qq-pd-group][Normal][09/05-22:27:02:021]=>autoStand bot in InterActionEventRegister
+[qq-pd-group][Normal][09/05-22:27:02:021]=>autoStand logger in InterActionEventRegister
+[qq-pd-group][Normal][09/05-22:27:02:021]=>autoStand logger in AuthAndHeartbeat
+[qq-pd-group][Normal][09/05-22:27:02:021]=>autoStand contextManager in AuthAndHeartbeat
+[qq-pd-group][Normal][09/05-22:27:02:021]=>autoStand wssWorker in AuthAndHeartbeat
+[qq-pd-group][Normal][09/05-22:27:02:021]=>autoStand config in AuthAndHeartbeat
+[qq-pd-group][Normal][09/05-22:27:02:021]=>autoStand bot in AuthAndHeartbeat
+[qq-pd-group][Normal][09/05-22:27:02:022]=>autoStand bot in MemberEventRegisters
+[qq-pd-group][Normal][09/05-22:27:02:022]=>autoStand bot in FriendEventsRegister
+[qq-pd-group][Normal][09/05-22:27:02:022]=>autoStand bot in MessageDeleteEventRegister
+[qq-pd-group][Normal][09/05-22:27:02:022]=>autoStand bot in GuildEventsRegister
+[qq-pd-group][Normal][09/05-22:27:02:022]=>autoStand logger in GuildEventsRegister
+[qq-pd-group][Normal][09/05-22:27:02:022]=>autoStand bot in GroupEventsRegister
+[qq-pd-group][Normal][09/05-22:27:02:022]=>autoStand logger in GroupEventsRegister
+[qq-pd-group][Normal][09/05-22:27:02:022]=>autoStand bot in MessageReactionEventRegister
+[qq-pd-group][Normal][09/05-22:27:02:022]=>autoStand bot in MessageEventsRegister
+[qq-pd-group][Normal][09/05-22:27:02:771]=>Use the (GET) method through the (BotBase) interface to request the data obtained by the response code of the (https://api.sgroup.qq.com/gateway) URL is (200), and ({"url":"wss://api.sgroup.qq.com/websocket"}) may be converted to (UrlPack{url='wss://api.sgroup.qq.com/websocket'}) type Will be processed and filtered
+[qq-pd-group][Normal][09/05-22:27:02:772]=>ws url:wss://api.sgroup.qq.com/websocket
+[qq-pd-group][Info]  [09/05-22:27:03:039]=>wss opened
+[qq-pd-group][Normal][09/05-22:27:03:045]=>receive {"d":{"heartbeat_interval":41250},"op":10}
+[qq-pd-group][Info]  [09/05-22:27:03:045]=>Authentication
+[qq-pd-group][Normal][09/05-22:27:03:061]=>wss send: {"d":{"intents":1007162883,"shard":[0,1],"properties":{},"token":"Bot 102145937.ndTJajFSnzcUYjTKm7KwrPZd7DiD6EnZ"},"op":2}
+[qq-pd-group][Normal][09/05-22:27:03:111]=>receive {"op":9,"d":false}
+[qq-pd-group][Debug] [09/05-22:27:03:112]=>wss closed with code 4014 disallowed intents
+[qq-pd-group][Error] [09/05-22:27:03:112]=>无权限订阅事件

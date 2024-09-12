@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="getjuan:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/getjuan_jar</output-path>
+    <root id="archive" name="getjuan.jar">
+      <element id="module-output" name="getjuan" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/okhttp-4.12.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/json.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
