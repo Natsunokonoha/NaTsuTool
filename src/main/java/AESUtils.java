@@ -5,7 +5,6 @@ import java.nio.charset.StandardCharsets;
 import java.security.InvalidAlgorithmParameterException;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;
-import java.util.Base64;
 
 public class AESUtils {
     private static final byte[] AES_KEY = Setting.Key.AES().getBytes(StandardCharsets.UTF_8);

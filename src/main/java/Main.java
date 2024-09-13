@@ -34,9 +34,9 @@ public class Main {
                 System.out.println("登录失败");
             }
         } else if (Select.equals("2")) {
-
-            ExecutorService executor = Executors.newFixedThreadPool(numberOfThreads); //设置线程池数量
-            RemoveLogin removeLogin = new RemoveLogin(Userid, currentTimestamp); //尝试批量登出
+            long datetime = UserInputUtils.TimeToTimestamp();
+            ExecutorService executor = Executors.newFixedThreadPool(numberOfThreads);
+            RemoveLogin removeLogin = new RemoveLogin(Userid, datetime);
             Future<Long> future = executor.submit(removeLogin);
             try {
                 // 获取并打印结果
