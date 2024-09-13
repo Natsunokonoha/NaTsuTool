@@ -34,8 +34,4 @@ public class AESUtils {
             throw new RuntimeException("AES 解密失败: " + e.getMessage());
         }
     }
-
-    public static String encodeBase64(byte[] data) {
-        return Base64.getEncoder().encodeToString(data);
-    }
 }
