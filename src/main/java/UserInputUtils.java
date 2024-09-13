@@ -24,7 +24,7 @@ public class UserInputUtils {
         System.out.print("是否知道机台DataTime？（1/0）");
         int is = scanner.nextInt();
         if(is == 1){
-            System.out.println("输入机台DataTime：");
+            System.out.println("输入机台DataTime（一次只推±30分钟）：");
             return scanner.nextInt();
         }
         else{
