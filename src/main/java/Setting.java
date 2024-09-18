@@ -38,16 +38,4 @@ public class Setting {
             return "/Maimai2Servlet/";
         }
     }
-
-    public static class BotSetting {
-        public static long Id() {
-            return 897791398;
-        }
-        public static String Password() {
-            return "Wd13883361636";
-        }
-    }
-    public static String clientId() {
-        return "A63E01E1216";
-    }
 }
