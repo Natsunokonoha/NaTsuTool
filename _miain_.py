@@ -1,4 +1,6 @@
 import botpy
+
+import botpy
 from botpy.types.message import Message
 
 class MyClient(botpy.Client):
@@ -7,4 +9,4 @@ class MyClient(botpy.Client):
 
 intents = botpy.Intents(public_guild_messages=True)
 client = MyClient(intents=intents)
-client.run(appid={102145937}, token={ndTJajFSnzcUYjTKm7KwrPZd7DiD6EnZ})
+client.run(appid={}, token={})
