@@ -38,4 +38,5 @@ public class Setting {
             return "/Maimai2Servlet/";
         }
     }
+
 }
