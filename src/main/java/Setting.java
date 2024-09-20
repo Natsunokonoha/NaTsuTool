@@ -38,4 +38,7 @@ public class Setting {
             return "/Maimai2Servlet/";
         }
     }
+    public static String clientId() {
+        return "A63E01E1191";
+    }
 }
