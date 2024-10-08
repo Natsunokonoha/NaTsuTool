@@ -1,3 +1,5 @@
+package Config;
+
 public class ServerConfig {
     private final String host;
     private final int port;
@@ -22,7 +24,7 @@ public class ServerConfig {
     }
 
     public static ServerConfig getDefaultConfigForLogin(String apiUrl) {
-        // Ensure you have imported or properly referenced the Setting.ServerConfig class
+        // Ensure you have imported or properly referenced the Config.Setting.Config.ServerConfig class
         String host = Setting.ServerConfig.Host();
         int port = Setting.ServerConfig.Port();
         String basePath = Setting.ServerConfig.Path();

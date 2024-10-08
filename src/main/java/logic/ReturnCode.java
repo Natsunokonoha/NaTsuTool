@@ -1,3 +1,5 @@
+package logic;
+
 import org.json.JSONObject;
 
 import java.nio.charset.StandardCharsets;
@@ -6,7 +8,7 @@ import java.util.Objects;
 public class ReturnCode {
     public static int main(String Api_Url, byte[] decryptedData, String step) {
         String decryptedString = new String(decryptedData, StandardCharsets.UTF_8);
-//        System.out.println(decryptedString);
+        System.out.println(decryptedString);
 
         // 解析JSON数据
         JSONObject jsonObject = new JSONObject(decryptedString);

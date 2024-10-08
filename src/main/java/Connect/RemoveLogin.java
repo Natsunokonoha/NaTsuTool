@@ -1,4 +1,7 @@
+package Connect;
+
 import java.util.concurrent.Callable;
+import Config.Setting;
 
 public class RemoveLogin implements Callable<Long> {
 

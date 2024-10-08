@@ -1,3 +1,5 @@
+package Config;
+
 public class Setting {
 
     public static class Api {
@@ -37,5 +39,8 @@ public class Setting {
         public static String Path() {
             return "/Maimai2Servlet/";
         }
+    }
+    public static String clientId() {
+        return "A63E01E1191";
     }
 }

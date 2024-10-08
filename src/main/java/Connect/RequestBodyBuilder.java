@@ -1,5 +1,8 @@
+package Connect;
+
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import Config.Setting;
 
 public class RequestBodyBuilder {
 
@@ -21,6 +24,6 @@ public class RequestBodyBuilder {
         return String.format("{\"userId\":%s,\"userChargelog\":{\"chargeId\":6,\"price\":1,\"purchaseDate\":\"%s\",\"playCount\":1,\"playerRating\":%d,\"placeId\":2067,\"regionId\":2,\"clientId\":\"%s\"},\"userCharge\":{\"chargeId\":6,\"stock\":1,\"purchaseDate\":\"%s\",\"validDate\":\"%s\"}}", userId, purchaseDate, playerRating, Setting.clientId(), validDate, validDate);
     }
     public static String logout(String userId, long currentTimestamp) {
-        return String.format("{\"userId\":%s,\"accessCode\":\"\",\"regionId\":2,\"placeId\":2067,\"clientId\":\"%s\",\"dateTime\":%d,\"type\":5}", userId,Setting.clientId() ,currentTimestamp);
+        return String.format("{\"userId\":%s,\"accessCode\":\"\",\"regionId\":2,\"placeId\":2067,\"clientId\":\"%s\",\"dateTime\":%d,\"type\":5}", userId, Setting.clientId() ,currentTimestamp);
     }
 }

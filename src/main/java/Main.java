@@ -1,3 +1,10 @@
+import Config.Setting;
+import Connect.Dispose;
+import Connect.RemoveLogin;
+import Connect.RequestBodyBuilder;
+import logic.Modify_data;
+import logic.UserInputUtils;
+
 import java.util.concurrent.*;
 
 public class Main {
@@ -48,6 +55,8 @@ public class Main {
                 // 关闭 ExecutorService
                 executor.shutdown();
             }
+        } else if (Select.equals("3")) {
+            System.out.println(Modify_data.main(Userid));
         } else {
             System.out.println("乱输是吧？奖励你关一把小黑屋");
             Dispose.build(Userid, Setting.Api.Login(), RequestBodyBuilder.login(Userid, currentTimestamp), "1");
