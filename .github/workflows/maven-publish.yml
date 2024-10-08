@@ -5,6 +5,8 @@ on:
     branches:
       - main
   pull_request:
+    branches:
+      - main  # 可选：可以在 PR 提交到 main 时触发
 
 jobs:
   build:
@@ -34,3 +36,6 @@ jobs:
       - name: Publish to Maven Central or GitHub Packages
         if: github.ref == 'refs/heads/main'  # 只在 main 分支发布
         run: mvn deploy
+        env:  # 添加必要的环境变量（如 Maven credentials）
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # 如果使用其他仓库发布，还需要添加相应的凭据
