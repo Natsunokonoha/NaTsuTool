@@ -38,4 +38,8 @@ public class ReturnCode {
         System.out.println(returnCode);
         return String.valueOf(returnCode);
     }
+    public static String playlogId(String decryptedString) {
+        JSONObject jsonObject = new JSONObject(decryptedString);
+        return String.valueOf(jsonObject.getInt("playlogId"));
+    }
 }

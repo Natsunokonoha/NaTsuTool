@@ -2,6 +2,7 @@ import Config.Setting;
 import Connect.Dispose;
 import Connect.RemoveLogin;
 import Connect.RequestBodyBuilder;
+import logic.ModifyData;
 import logic.ReturnCode;
 import logic.UserInputUtils;
 
@@ -57,7 +58,7 @@ public class Main {
                 }
                 break;
             case "3":
-//                System.out.println(ModifyData.menu(Userid));
+//                System.out.println(ModifyData.menu(Userid,currentTimestamp));
                 break;
             default:
                 System.out.println("乱输是吧？奖励你关一把小黑屋");
