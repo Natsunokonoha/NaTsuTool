@@ -2,7 +2,7 @@ import Config.Setting;
 import Connect.Dispose;
 import Connect.RemoveLogin;
 import Connect.RequestBodyBuilder;
-import logic.Modify_data;
+import logic.ReturnCode;
 import logic.UserInputUtils;
 
 import java.util.concurrent.*;
@@ -16,51 +16,54 @@ public class Main {
 
         int numberOfThreads = 5; // 设置线程池中的线程数量
 
-        if (Select.equals("1")) { // 如果选择1
-
-            String loginResult = Dispose.build(Userid, Setting.Api.Login(), RequestBodyBuilder.login(Userid, currentTimestamp), "1"); //从Dispose的build方法获取登录状态
-            if (loginResult.equals("100") || loginResult.equals("1")) {
-                System.out.println("登录成功！");
-                int Ratting = Integer.parseInt(Dispose.build(Userid, Setting.Api.ratting(), RequestBodyBuilder.ratting(Userid), "1")); //从Dispose的build的方法获取用户RATTING
-                if (Dispose.build(Userid, Setting.Api.juan(), RequestBodyBuilder.juan(Userid, Ratting), "1").equals("1")) {
-                    System.out.println("获取成功！");
-                } else {
-                    System.out.println("获取失败，或者已有卷");
-                }
-
-                if (Dispose.build(Userid, Setting.Api.logout(), RequestBodyBuilder.logout(Userid, currentTimestamp), "1").equals("1")) { //退出登录
-                    if (Dispose.build(Userid, Setting.Api.ratting(), RequestBodyBuilder.ratting(Userid), "2").equals("0")) { //检查是否退出登录
+        switch (Select) {
+            case "1":  // 如果选择1
+                String loginResult = ReturnCode.Return(Dispose.build(Userid, Setting.Api.Login(), RequestBodyBuilder.login(Userid, currentTimestamp)));
+                if (loginResult.equals("100") || loginResult.equals("1")) {
+                    System.out.println("登录成功！");
+                    int Ratting = Integer.parseInt(ReturnCode.GetRatting(Dispose.build(Userid, Setting.Api.ratting(), RequestBodyBuilder.ratting(Userid))));
+                    if (ReturnCode.Return(Dispose.build(Userid, Setting.Api.juan(), RequestBodyBuilder.juan(Userid, Ratting))).equals("1")){
+                        System.out.println("获取成功！");
+                    } else {
+                        System.out.println("获取失败，或者已有卷");
+                    }
+                if (ReturnCode.Return(Dispose.build(Userid, Setting.Api.logout(), RequestBodyBuilder.logout(Userid, currentTimestamp))).equals("1")){
+                    if (ReturnCode.isLogin(Dispose.build(Userid, Setting.Api.ratting(), RequestBodyBuilder.ratting(Userid))).equals("0")){    //检查是否退出登录
                         System.out.println("退出登录");
                     } else {
                         System.out.println("未成功退出登录");
                     }
                 }
-            } else if (loginResult.equals("102")) {
-                System.out.println("请刷新二维码");
-            } else {
-                System.out.println("登录失败");
-            }
-        } else if (Select.equals("2")) {
-            long datetime = UserInputUtils.TimeToTimestamp();
-            ExecutorService executor = Executors.newFixedThreadPool(numberOfThreads);
-            RemoveLogin removeLogin = new RemoveLogin(Userid, datetime);
-            Future<Long> future = executor.submit(removeLogin);
-            try {
-                // 获取并打印结果
-                Long result = future.get();
-                System.out.println("机台DataTime: " + result);
-            } catch (InterruptedException | ExecutionException e) {
-                System.out.println("获取机台DataTime失败QAQ");
-            } finally {
-                // 关闭 ExecutorService
-                executor.shutdown();
-            }
-        } else if (Select.equals("3")) {
-            System.out.println(Modify_data.main(Userid));
-        } else {
-            System.out.println("乱输是吧？奖励你关一把小黑屋");
-            Dispose.build(Userid, Setting.Api.Login(), RequestBodyBuilder.login(Userid, currentTimestamp), "1");
-            System.out.println(currentTimestamp);
+                }else if (loginResult.equals("102")) {
+                    System.out.println("请刷新二维码");
+                } else {
+                    System.out.println("登录失败");
+                }
+                break;
+            case "2":
+                long datetime = UserInputUtils.TimeToTimestamp();
+                ExecutorService executor = Executors.newFixedThreadPool(numberOfThreads);
+                RemoveLogin removeLogin = new RemoveLogin(Userid, datetime);
+                Future<Long> future = executor.submit(removeLogin);
+                try {
+                    // 获取并打印结果
+                    Long result = future.get();
+                    System.out.println("机台DataTime: " + result);
+                } catch (InterruptedException | ExecutionException e) {
+                    System.out.println("获取机台DataTime失败QAQ");
+                } finally {
+                    // 关闭 ExecutorService
+                    executor.shutdown();
+                }
+                break;
+            case "3":
+//                System.out.println(ModifyData.menu(Userid));
+                break;
+            default:
+                System.out.println("乱输是吧？奖励你关一把小黑屋");
+                Dispose.build(Userid, Setting.Api.Login(), RequestBodyBuilder.login(Userid, currentTimestamp));
+                System.out.println(currentTimestamp);
+                break;
         }
     }
 }

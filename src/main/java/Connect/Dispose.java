@@ -1,13 +1,13 @@
 package Connect;
 
 import java.nio.charset.StandardCharsets;
+import java.util.Arrays;
 import java.util.Map;
 
 import Config.ServerConfig;
-import logic.ReturnCode;
 
 public class Dispose {
-    public static String build(String userId, String Api_Url, String dataToEncrypt, String step) {
+    public static String build(String userId, String Api_Url, String dataToEncrypt) {
         byte[] plaintext = dataToEncrypt.getBytes(StandardCharsets.UTF_8);
 
         byte[] encryptedData = DecompressionUtils.AESUtils.aesEncrypt(plaintext);
@@ -22,8 +22,11 @@ public class Dispose {
             byte[] decryptedData = DecompressionUtils.AESUtils.aesDecrypt(decompressedData);
 
             // 转换为字符串并打印解密后的数据
-            int returnCode = ReturnCode.main(Api_Url, decryptedData, step);
-            return String.valueOf(returnCode);
+//            int returnCode = ReturnCode.code(Api_Url, decryptedData, step);
+//            return String.valueOf(returnCode);
+            String decryptedString = new String(decryptedData, StandardCharsets.UTF_8);
+            System.out.println(decryptedString);
+            return decryptedString;
         } catch (Exception e) {
             System.out.println("加密或解密失败: " + e.getMessage());
             return "Error: " + e.getMessage();

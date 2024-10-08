@@ -2,14 +2,15 @@ package Connect;
 
 import java.util.concurrent.Callable;
 import Config.Setting;
+import logic.ReturnCode;
 
 public class RemoveLogin implements Callable<Long> {
 
-    private final String userId;
+    private final String Userid;
     private long datetime;
 
-    public RemoveLogin(String userId, long datetime) {
-        this.userId = userId;
+    public RemoveLogin(String Userid, long datetime) {
+        this.Userid = Userid;
         this.datetime = datetime;
     }
 
@@ -19,8 +20,8 @@ public class RemoveLogin implements Callable<Long> {
     public Long call() {
         long res = datetime;
         int track = 0;
-        while (Dispose.build(userId, Setting.Api.ratting(), RequestBodyBuilder.ratting(userId), "2").equals("1")){
-            Dispose.build(userId, Setting.Api.logout(), RequestBodyBuilder.logout(userId, datetime), "1");
+        while (ReturnCode.isLogin(Dispose.build(Userid, Setting.Api.ratting(), RequestBodyBuilder.ratting(Userid))).equals("1")){
+            Dispose.build(Userid, Setting.Api.logout(), RequestBodyBuilder.logout(Userid, datetime));
             System.out.println(datetime);
             datetime++;
             if (datetime - res == 60){

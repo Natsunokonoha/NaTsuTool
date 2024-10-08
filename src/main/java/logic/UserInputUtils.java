@@ -14,7 +14,7 @@ public class UserInputUtils {
         return scanner.nextLine().trim();
     }
     public static String Select() {
-        System.out.println("扣1发卷扣2解小黑屋");
+        System.out.println("扣1发卷扣2解小黑屋扣3修改用户数据");
         Scanner scanner = new Scanner(System.in);
         return scanner.nextLine().trim();
     }
@@ -42,5 +42,16 @@ public class UserInputUtils {
             // 将LocalDateTime对象转换为时间戳
             return dateTime.atZone(ZoneId.systemDefault()).toEpochSecond();
         }
+    }
+    public static String GetUserInputForUserAll(){
+        System.out.println("1.修改上次签到时间");
+        System.out.println("2.修改玩家Ratting");
+        System.out.println("3.修改玩家歌曲数据");
+        System.out.println("4.获得歌曲");
+        System.out.println("5.快速打段");
+        System.out.println("6.修改Best50");
+        System.out.print("请输入你的选择：");
+        Scanner scanner = new Scanner(System.in);
+        return scanner.nextLine().trim();
     }
 }
