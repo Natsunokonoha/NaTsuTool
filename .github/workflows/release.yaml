@@ -1,27 +1,20 @@
-name: Build and Release on Tag
-
-on:
-  push:
-    tags:
-      - '*'
-
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
-        uses: Natsunokonoha/checkout@v3  # 使用你 fork 的 checkout
+        uses: Natsunokonoha/checkout@main  # 使用 fork 的 checkout 仓库的 main 分支
 
       - name: Set up JDK 17
-        uses: Natsunokonoha/setup-java@v3  # 使用你 fork 的 setup-java
+        uses: Natsunokonoha/setup-java@main  # 使用 fork 的 setup-java 仓库的 main 分支
 
       - name: Build with Maven
         run: mvn clean package
 
       - name: Create GitHub Release
         id: create_release
-        uses: Natsunokonoha/create-release@v1  # 使用你 fork 的 create-release
+        uses: Natsunokonoha/create-release@main  # 使用 fork 的 create-release 仓库的 main 分支
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
@@ -31,9 +24,9 @@ jobs:
           prerelease: false
 
       - name: Upload JAR to Release
-        uses: Natsunokonoha/upload-release-asset@v1  # 使用你 fork 的 upload-release-asset
+        uses: Natsunokonoha/upload-release-asset@main  # 使用 fork 的 upload-release-asset 仓库的 main 分支
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: target/getjuan.jar
-          asset_name: getjuan.jar
+          asset_path: target/your-project.jar
+          asset_name: your-project.jar
           asset_content_type: application/java-archive
