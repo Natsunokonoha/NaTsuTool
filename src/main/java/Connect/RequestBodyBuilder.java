@@ -4,6 +4,8 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import Config.Setting;
 
+import static logic.BuildUserAll.Basic;
+
 public class RequestBodyBuilder {
 
     public static String login(String userId, long currentTimestamp) {
@@ -25,5 +27,11 @@ public class RequestBodyBuilder {
     }
     public static String logout(String userId, long currentTimestamp) {
         return String.format("{\"userId\":%s,\"accessCode\":\"\",\"regionId\":2,\"placeId\":2067,\"clientId\":\"%s\",\"dateTime\":%d,\"type\":5}", userId, Setting.clientId() ,currentTimestamp);
+    }
+    public static String userData(String userId) {
+        return String.format("{\"userId\":%s}", userId);
+    }
+    public static String UserAll(String Userid, Long currentTimestamp) {
+        return String.format("{\"userId\":%s}", Basic(Userid, currentTimestamp));
     }
 }
