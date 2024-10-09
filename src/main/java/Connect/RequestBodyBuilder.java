@@ -3,8 +3,7 @@ package Connect;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import Config.Setting;
-
-import static logic.BuildUserAll.Basic;
+import logic.BuildUserAll;
 
 public class RequestBodyBuilder {
 
@@ -34,7 +33,7 @@ public class RequestBodyBuilder {
     public static String userCharacterList(String userId) {
         return String.format("{\"userId\":%s}", userId);
     }
-    public static String UserAll(String Userid, Long currentTimestamp) {
-        return String.format("{\"userId\":%s}", Basic(Userid, currentTimestamp));
+    public static String UserAll(String userId, Long currentTimestamp) {
+        return String.format("{\"userId\":%s,\"playlogId\":%s,\"isEventMode\":false,\"isFreePlay\":false,\"upsertUserAll\":[%s]}", userId, BuildUserAll.Basic(userId,currentTimestamp), BuildUserAll.userData(userId,currentTimestamp));
     }
 }
