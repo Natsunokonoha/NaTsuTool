@@ -20,8 +20,8 @@ public class RemoveLogin implements Callable<Long> {
     public Long call() {
         long res = datetime;
         int track = 0;
-        while (ReturnCode.isLogin(Dispose.build(Userid, Setting.Api.ratting(), RequestBodyBuilder.ratting(Userid))).equals("1")){
-            Dispose.build(Userid, Setting.Api.logout(), RequestBodyBuilder.logout(Userid, datetime));
+        while (ReturnCode.isLogin(SendReq.Ratting(Userid)).equals("1")){
+            SendReq.Logout(Userid, datetime);
             System.out.println(datetime);
             datetime++;
             if (datetime - res == 60){

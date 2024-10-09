@@ -2,6 +2,7 @@ import Config.Setting;
 import Connect.Dispose;
 import Connect.RemoveLogin;
 import Connect.RequestBodyBuilder;
+import Connect.SendReq;
 import logic.ModifyData;
 import logic.ReturnCode;
 import logic.UserInputUtils;
@@ -19,17 +20,16 @@ public class Main {
 
         switch (Select) {
             case "1":  // 如果选择1
-                String loginResult = ReturnCode.Return(Dispose.build(Userid, Setting.Api.Login(), RequestBodyBuilder.login(Userid, currentTimestamp)));
+                String loginResult = SendReq.Login(Userid, currentTimestamp);
                 if (loginResult.equals("100") || loginResult.equals("1")) {
                     System.out.println("登录成功！");
-                    int Ratting = Integer.parseInt(ReturnCode.GetRatting(Dispose.build(Userid, Setting.Api.ratting(), RequestBodyBuilder.ratting(Userid))));
-                    if (ReturnCode.Return(Dispose.build(Userid, Setting.Api.juan(), RequestBodyBuilder.juan(Userid, Ratting))).equals("1")){
+                    if (ReturnCode.Return(SendReq.Track(Userid,Integer.parseInt(ReturnCode.GetRatting(SendReq.Ratting(Userid))))).equals("1")){
                         System.out.println("获取成功！");
                     } else {
                         System.out.println("获取失败，或者已有卷");
                     }
-                if (ReturnCode.Return(Dispose.build(Userid, Setting.Api.logout(), RequestBodyBuilder.logout(Userid, currentTimestamp))).equals("1")){
-                    if (ReturnCode.isLogin(Dispose.build(Userid, Setting.Api.ratting(), RequestBodyBuilder.ratting(Userid))).equals("0")){    //检查是否退出登录
+                if (ReturnCode.Return(SendReq.Logout(Userid,currentTimestamp)).equals("1")){
+                    if (ReturnCode.isLogin(SendReq.Ratting(Userid)).equals("0")){    //检查是否退出登录
                         System.out.println("退出登录");
                     } else {
                         System.out.println("未成功退出登录");
@@ -62,7 +62,7 @@ public class Main {
                 break;
             default:
                 System.out.println("乱输是吧？奖励你关一把小黑屋");
-                Dispose.build(Userid, Setting.Api.Login(), RequestBodyBuilder.login(Userid, currentTimestamp));
+                SendReq.Login(Userid, currentTimestamp);
                 System.out.println(currentTimestamp);
                 break;
         }
