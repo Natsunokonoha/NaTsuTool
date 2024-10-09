@@ -3,10 +3,10 @@ package logic;
 import Connect.SendReq;
 
 public class BuildUserAll {
-    public static String Basic(String Userid ,Long currentTimestamp){
-        return ReturnCode.playlogId(SendReq.Login(Userid,currentTimestamp));
+    public static String Basic(String userid ,Long currentTimestamp){
+        return ReturnCode.playlogId(SendReq.Login(userid,currentTimestamp));
     }
-    public static String userData(String Userid){
-        return Json.toUserData(SendReq.userData(Userid));
+    public static String userData(String Userid,Long dateTime){
+        return Json.toUserData(SendReq.userData(Userid),dateTime);
     }
 }
