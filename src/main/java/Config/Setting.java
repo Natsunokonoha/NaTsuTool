@@ -16,6 +16,7 @@ public class Setting {
         public static String logout() {
             return "6165a4a2828e5ac54c215da37b83a71d";
         }
+        public static String userData() { return "9bf7b5cbd258358e0de2188b324b6272"; }
     }
 
     public static class Key {
