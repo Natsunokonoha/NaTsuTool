@@ -20,6 +20,7 @@ public class Dispose {
             byte[] decompressedData = DecompressionUtils.decompress(responseData);
             byte[] decryptedData = DecompressionUtils.AESUtils.aesDecrypt(decompressedData);
 
+            // 转换为字符串并打印解密后的数据
             return new String(decryptedData, StandardCharsets.UTF_8);
         } catch (Exception e) {
             System.out.println("加密或解密失败: " + e.getMessage());
