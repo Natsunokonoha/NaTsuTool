@@ -1,7 +1,4 @@
-import Config.Setting;
-import Connect.Dispose;
 import Connect.RemoveLogin;
-import Connect.RequestBodyBuilder;
 import Connect.SendReq;
 import logic.ModifyData;
 import logic.ReturnCode;

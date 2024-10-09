@@ -1,7 +1,6 @@
 package Connect;
 
 import java.util.concurrent.Callable;
-import Config.Setting;
 import logic.ReturnCode;
 
 public class RemoveLogin implements Callable<Long> {
