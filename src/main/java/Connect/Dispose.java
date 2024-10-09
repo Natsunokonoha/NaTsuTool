@@ -1,7 +1,6 @@
 package Connect;
 
 import java.nio.charset.StandardCharsets;
-import java.util.Arrays;
 import java.util.Map;
 
 import Config.ServerConfig;
@@ -22,11 +21,7 @@ public class Dispose {
             byte[] decryptedData = DecompressionUtils.AESUtils.aesDecrypt(decompressedData);
 
             // 转换为字符串并打印解密后的数据
-//            int returnCode = ReturnCode.code(Api_Url, decryptedData, step);
-//            return String.valueOf(returnCode);
-            String decryptedString = new String(decryptedData, StandardCharsets.UTF_8);
-            System.out.println(decryptedString);
-            return decryptedString;
+            return new String(decryptedData, StandardCharsets.UTF_8);
         } catch (Exception e) {
             System.out.println("加密或解密失败: " + e.getMessage());
             return "Error: " + e.getMessage();

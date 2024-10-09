@@ -17,6 +17,7 @@ public class Setting {
         public static String userData() { return "9bf7b5cbd258358e0de2188b324b6272"; }
         public static String userCharacterList() { return "16768656af052a9a3cd612e3a612a219"; } //旅行伙伴all
         public static String userItemList() { return "e168a0bcd17a57ce9ce302b4ad9c4713";} //用户物品
+
     }
 
     public static class Key {
