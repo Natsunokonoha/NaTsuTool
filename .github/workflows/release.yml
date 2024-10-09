@@ -42,6 +42,6 @@ jobs:
         uses: Natsunokonoha/upload-release-asset@main
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: target/getjuan.jar
-          asset_name: getjuan.jar
+          asset_path: target/your-project.jar
+          asset_name: your-project.jar
           asset_content_type: application/java-archive
