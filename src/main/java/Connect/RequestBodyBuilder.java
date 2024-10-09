@@ -31,6 +31,9 @@ public class RequestBodyBuilder {
     public static String userData(String userId) {
         return String.format("{\"userId\":%s}", userId);
     }
+    public static String userCharacterList(String userId) {
+        return String.format("{\"userId\":%s}", userId);
+    }
     public static String UserAll(String Userid, Long currentTimestamp) {
         return String.format("{\"userId\":%s}", Basic(Userid, currentTimestamp));
     }
