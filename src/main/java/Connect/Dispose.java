@@ -14,7 +14,6 @@ public class Dispose {
         ServerConfig config = ServerConfig.getDefaultConfigForLogin(Api_Url); // 获取默认的服务器配置
 
         Map<String, String> headers = RequestHeadersBuilder.buildHeaders(userId, encryptedData.length, config.getHost(), config.getPort(), Api_Url);
-
         try {
             byte[] responseData = HttpUtils.sendHttpRequest(config.getHost(), config.getPort(), config.getPath(), encryptedData, headers);
             byte[] decompressedData = DecompressionUtils.decompress(responseData);
