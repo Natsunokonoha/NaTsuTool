@@ -43,5 +43,5 @@ jobs:
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: target/your-project.jar
-          asset_name: your-project.jar
-          asset_content_type: application/java-archive
+          asset_name: getjuan.jar
+          asset_content_type: application/getjuan
