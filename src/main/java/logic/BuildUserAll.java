@@ -5,20 +5,22 @@ import Connect.SendReq;
 public class BuildUserAll {
     public static String Basic(String userid ,Long currentTimestamp){
         String codeId = ReturnCode.playlogId(SendReq.Login(userid, currentTimestamp));
-        System.out.println(codeId);
-        if (codeId != null && !codeId.equals("1")) {
-            if (codeId.equals("100")) {
-                System.out.println("你处于登陆状态！请未登录的时候重试！");
-            } else if (codeId.equals("102")) {
-                System.out.println("请刷新二维码");
-            } else {
-                System.out.println("未知错误！");
-            }
+        if (codeId.equals("null")) {
+            System.out.println("登陆状态异常！可能是没有刷新二维码");
             System.exit(0);
         }
         return codeId;
     }
+
     public static String userData(String Userid,Long dateTime){
         return Json.toUserData(SendReq.userData(Userid),dateTime);
+    }
+
+    public static String userExtend(String Userid){
+        return Json.touserExtend(SendReq.userExtend(Userid));
+    }
+
+    public static String userOption(String Userid){
+        return Json.touserOption(SendReq.userOption(Userid));
     }
 }
