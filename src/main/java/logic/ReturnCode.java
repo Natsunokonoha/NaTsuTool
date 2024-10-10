@@ -35,7 +35,7 @@ public class ReturnCode {
         } else {
             returnCode = jsonObject.getInt("isLogin"); // 如果不是布尔类型，直接尝试获取整数
         }
-        System.out.println(returnCode);
+//        System.out.println(returnCode);
         return String.valueOf(returnCode);
     }
     public static String playlogId(String decryptedString) {
