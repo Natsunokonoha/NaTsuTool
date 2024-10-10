@@ -56,6 +56,7 @@ public class Main {
                 break;
             case "3":
                 System.out.println(ModifyData.menu(Userid,currentTimestamp));
+                SendReq.Logout(Userid, currentTimestamp);
                 break;
             default:
                 System.out.println("乱输是吧？奖励你关一把小黑屋");
