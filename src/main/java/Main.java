@@ -1,3 +1,4 @@
+import Config.Setting;
 import Connect.RemoveLogin;
 import Connect.SendReq;
 import logic.ModifyData;
@@ -10,10 +11,9 @@ public class Main {
     public static void main(String[] args) {
 
         long currentTimestamp = System.currentTimeMillis() / 1000;
+        System.out.println("当前时间戳："+currentTimestamp);
         String Userid = UserInputUtils.getUserInput(); // 调用UserInputUtils的getUserInput方法用户输入获取 Userid
         String Select = UserInputUtils.Select(); // 从用户输入获取操作选择
-
-        int numberOfThreads = 5; // 设置线程池中的线程数量
 
         switch (Select) {
             case "1":  // 如果选择1
@@ -40,7 +40,7 @@ public class Main {
                 break;
             case "2":
                 long datetime = UserInputUtils.TimeToTimestamp();
-                ExecutorService executor = Executors.newFixedThreadPool(numberOfThreads);
+                ExecutorService executor = Executors.newFixedThreadPool(Setting.Others.Thread());
                 RemoveLogin removeLogin = new RemoveLogin(Userid, datetime);
                 Future<Long> future = executor.submit(removeLogin);
                 try {
