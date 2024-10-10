@@ -13,29 +13,32 @@ public class RemoveLogin implements Callable<Long> {
         this.datetime = datetime;
     }
 
-
-
     @Override
     public Long call() {
         long res = datetime;
-        int track = 0;
-        while (ReturnCode.isLogin(SendReq.Ratting(Userid)).equals("1")){
+        int track = 0, order = 0;
+
+        while (ReturnCode.isLogin(SendReq.Ratting(Userid)).equals("1")) {
             SendReq.Logout(Userid, datetime);
             System.out.println(datetime);
             datetime++;
-            if (datetime - res == 60){
-                track++;
+
+            if (datetime - res == 60) {
                 res = datetime;
+                track++;
+
                 if (track == 30) {
-                    datetime = datetime - 240;
-                    res = datetime;
+                    datetime -= 3600;
+                    order++;
+                    if (order == 2) {
+                        System.out.println("失败");
+                        return 0L;
+                    }
                     System.out.println("正推失败，尝试反推");
-                } else if (track == 4) {
-                    System.out.println("失败");
-                    return 0L;
                 }
             }
         }
         return datetime - 1;
     }
+
 }
