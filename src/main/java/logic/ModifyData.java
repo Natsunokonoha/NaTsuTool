@@ -1,11 +1,10 @@
 package logic;
 
-import Connect.SendReq;
+import Connect.RequestBodyBuilder;
 
 public class ModifyData {
     public static String menu(String userId, Long currentTimestamp) {
-        BuildUserAll.userData(userId, currentTimestamp);
-        return SendReq.Logout(userId, currentTimestamp);
+        return RequestBodyBuilder.UserAll(userId, currentTimestamp);
     }
 //        String Select = UserInputUtils.GetUserInputForUserAll();
 //        switch (Select) {
