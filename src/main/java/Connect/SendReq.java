@@ -18,4 +18,10 @@ public class SendReq {
     public static String userData(String Userid){
         return Dispose.build(Userid, Setting.Api.userData(), RequestBodyBuilder.userData(Userid));
     }
+    public static String userExtend(String Userid){
+        return Dispose.build(Userid, Setting.Api.userExtend(), RequestBodyBuilder.userExtend(Userid));
+    }
+    public static String userOption(String Userid){
+        return Dispose.build(Userid, Setting.Api.userOption(), RequestBodyBuilder.userOption(Userid));
+    }
 }
