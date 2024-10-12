@@ -221,4 +221,41 @@ public class Json {
             throw new RuntimeException(e);
         }
     }
+
+    public static String touserMapList(String jsonString) {
+        try {
+            ObjectMapper mapper = new ObjectMapper();
+            // 将 JSON 字符串转换为 Jackson 的 ObjectNode
+            ObjectNode jsonObject = (ObjectNode) mapper.readTree(jsonString);
+
+            // 获取 userOption 节点
+            JsonNode userOptionNode = jsonObject.get("userMapList");
+
+            // 返回 userOption 节点的字符串
+            return userOptionNode.toString();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+    public static String tologinIn(String jsonString) {
+        try {
+            // 创建 Jackson 的 ObjectMapper 实例
+            ObjectMapper objectMapper = new ObjectMapper();
+
+            // 解析 JSON 字符串为 JsonNode
+            JsonNode jsonNode = objectMapper.readTree(jsonString);
+
+            // 检查 returnCode 是否为 1
+            if (jsonNode.has("returnCode") && jsonNode.get("returnCode").asInt() == 1) {
+                // 如果 returnCode 为 1，返回 loginId
+                if (jsonNode.has("loginId")) {
+                    return jsonNode.get("loginId").asText();
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        // returnCode 不为 1 或出现异常时返回 null
+        return null;
+    }
 }
