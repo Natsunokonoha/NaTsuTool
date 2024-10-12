@@ -4,7 +4,7 @@ import Connect.SendReq;
 
 public class BuildUserAll {
     public static String Basic(String userid ,Long currentTimestamp){
-        String codeId = ReturnCode.playlogId(SendReq.Login(userid, currentTimestamp));
+        String codeId = Json.tologinIn(SendReq.Login(userid, currentTimestamp));
         if (codeId.equals("null")) {
             System.out.println("登陆状态异常！可能是没有刷新二维码");
             System.exit(0);
@@ -22,5 +22,8 @@ public class BuildUserAll {
 
     public static String userOption(String Userid){
         return Json.touserOption(SendReq.userOption(Userid));
+    }
+    public static String userMapList(String Userid){
+        return Json.touserMapList(SendReq.userMapList(Userid));
     }
 }
