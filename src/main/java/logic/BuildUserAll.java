@@ -5,16 +5,14 @@ import Connect.SendReq;
 public class BuildUserAll {
     public static String Basic(String userid ,Long currentTimestamp){
         String codeId = ReturnCode.playlogId(SendReq.Login(userid, currentTimestamp));
-        if (codeId.equals("null")) {
+        if (codeId.equals("102")) {
             System.out.println("登陆状态异常！可能是没有刷新二维码");
             System.exit(0);
         }
         return codeId;
     }
 
-    public static String userData(String Userid,Long dateTime){
-        return Json.toUserData(SendReq.userData(Userid),dateTime);
-    }
+    public static String userData(String Userid,Long dateTime){ return Json.toUserData(SendReq.userData(Userid),dateTime); }
 
     public static String userExtend(String Userid){
         return Json.touserExtend(SendReq.userExtend(Userid));
@@ -23,4 +21,6 @@ public class BuildUserAll {
     public static String userOption(String Userid){
         return Json.touserOption(SendReq.userOption(Userid));
     }
+
+    public static String userCharacterList(String Userid){ return Json.touserCharacterList(SendReq.userCharacterList(Userid)); }
 }
