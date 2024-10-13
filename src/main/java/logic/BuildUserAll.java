@@ -9,15 +9,21 @@ public class BuildUserAll {
             switch (codeId) {
                 case "102":
                     System.out.println("登陆状态异常！可能是没有刷新二维码");
-                    System.exit(0);
+                    if (ReturnCode.Return(SendReq.Logout(userid,currentTimestamp)).equals("1")){
+                        if (ReturnCode.isLogin(SendReq.Ratting(userid)).equals("0")){    //检查是否退出登录
+                            System.out.println("退出登录");
+                        } else {
+                            System.out.println("未成功退出登录");
+                        }
+                    }
+                    break;
                 case "103":
                     System.out.println("登陆状态异常！可能是错误的userID");
-                    System.exit(0);
-                case "null":
+                    break;
+                default:
                     System.out.println("未知错误！");
-                    System.exit(0);
             }
-
+            System.exit(0);
         }
         return codeId;
     }
