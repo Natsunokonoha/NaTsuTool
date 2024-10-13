@@ -32,10 +32,12 @@ public class RequestBodyBuilder {
     }
     public static String userExtend(String userId) { return String.format("{\"userId\":%s}", userId); }
     public static String userOption(String userId) { return String.format("{\"userId\":%s}", userId); }
-    public static String userCharacterList(String userId) { return String.format("{\"userId\":%s}", userId );
+    public static String userMapList(String userId) { return String.format("{\"userId\":%s,\"nextIndex\":0,\"maxCount\":20}", userId); }
+    public static String userCharacterList(String userId) {
+        return String.format("{\"userId\":%s}", userId);
     }
 
     public static String UserAll(String userId, Long currentTimestamp) {
-        return String.format("{\"userId\":%s,\"playlogId\":%s,\"isEventMode\":false,\"isFreePlay\":false,\"upsertUserAll\":{\"userData\":[%s],\"userExtend\":[%s],\"userOption\":[%s],\"userCharacterList\":[%s]}}", userId, BuildUserAll.Basic(userId,currentTimestamp), BuildUserAll.userData(userId,currentTimestamp), BuildUserAll.userExtend(userId), BuildUserAll.userOption(userId), BuildUserAll.userCharacterList(userId));
+        return String.format("{\"userId\":%s,\"playlogId\":%s,\"isEventMode\":false,\"isFreePlay\":false,\"upsertUserAll\":{\"userData\":[%s],\"userExtend\":[%s],\"userOption\":[%s],\"userCharacterList\":[],\"userGhost\":[],\"userMapList\":[%s}}", userId, BuildUserAll.Basic(userId,currentTimestamp), BuildUserAll.userData(userId,currentTimestamp), BuildUserAll.userExtend(userId), BuildUserAll.userOption(userId), BuildUserAll.userMapList(userId));
     }
 }
