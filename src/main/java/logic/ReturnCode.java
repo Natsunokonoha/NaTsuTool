@@ -38,19 +38,4 @@ public class ReturnCode {
 //        System.out.println(returnCode);
         return String.valueOf(returnCode);
     }
-    public static String playlogId(String decryptedString) {
-        JSONObject jsonObject = new JSONObject(decryptedString);
-
-        // 检查 loginId 是否存在并且不为 null
-        if (!jsonObject.isNull("loginId")) {
-            return String.valueOf(jsonObject.getInt("loginId"));
-        }
-        // 如果 loginId 不存在或为 null，返回 returnCode
-        else if (jsonObject.has("returnCode") && !jsonObject.isNull("returnCode")) {
-            return String.valueOf(jsonObject.getInt("returnCode"));
-        }
-
-        // 如果 loginId 和 returnCode 都不存在，返回 null 或其他默认值
-        return null;
-    }
 }
