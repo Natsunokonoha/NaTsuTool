@@ -221,4 +221,19 @@ public class Json {
             throw new RuntimeException(e);
         }
     }
+    public static String touserCharacterList(String jsonString) {
+        try {
+            ObjectMapper mapper = new ObjectMapper();
+            // 将 JSON 字符串转换为 Jackson 的 ObjectNode
+            ObjectNode jsonObject = (ObjectNode) mapper.readTree(jsonString);
+
+            // 获取 userOption 节点
+            JsonNode userOptionNode = jsonObject.get("userCharacterList");
+
+            // 返回 userOption 节点的字符串
+            return userOptionNode.toString();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
 }
