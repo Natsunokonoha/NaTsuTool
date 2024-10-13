@@ -24,7 +24,7 @@ public class SendReq {
     public static String userOption(String Userid){
         return Dispose.build(Userid, Setting.Api.userOption(), RequestBodyBuilder.userOption(Userid));
     }
-    public static String userCharacterList(String Userid){
-        return Dispose.build(Userid, Setting.Api.userCharacterList(), RequestBodyBuilder.userCharacterList(Userid));
+    public static String userMapList(String Userid){
+        return Dispose.build(Userid, Setting.Api.userMapList(), RequestBodyBuilder.userMapList(Userid));
     }
 }
