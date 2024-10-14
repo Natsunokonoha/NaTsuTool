@@ -1,7 +1,8 @@
 package Connect;
 
 import java.util.concurrent.Callable;
-import logic.ReturnCode;
+
+import logic.Json;
 
 public class RemoveLogin implements Callable<Long> {
 
@@ -18,7 +19,7 @@ public class RemoveLogin implements Callable<Long> {
         long res = datetime;
         int track = 0, order = 0;
 
-        while (ReturnCode.isLogin(SendReq.Ratting(Userid)).equals("1")) {
+        while (Json.isLogin(SendReq.Ratting(Userid)).equals("1")) {
             SendReq.Logout(Userid, datetime);
             System.out.println(datetime);
             datetime++;

@@ -6,12 +6,40 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.fasterxml.jackson.databind.node.TextNode;
+import org.json.JSONObject;
 
 import java.io.IOException;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class Json {
+
+    public static String Return(String decryptedString) {
+        // 解析JSON数据
+        JSONObject jsonObject = new JSONObject(decryptedString);
+        return String.valueOf(jsonObject.getInt("returnCode"));
+
+    }
+
+    public static int GetRatting(String decryptedString) {
+        // 解析JSON数据
+        JSONObject jsonObject = new JSONObject(decryptedString);
+        Object ratting = jsonObject.get("playerRating");
+        return (int) ratting;
+    }
+
+    public static String isLogin(String decryptedString) {
+        JSONObject jsonObject = new JSONObject(decryptedString);
+        Object isLogin = jsonObject.get("isLogin");
+        int returnCode;
+        if (isLogin instanceof Boolean) {
+            returnCode = (Boolean) isLogin ? 1 : 0; // 将 true 转换为 1，false 转换为 0
+        } else {
+            returnCode = jsonObject.getInt("isLogin"); // 如果不是布尔类型，直接尝试获取整数
+        }
+//        System.out.println(returnCode);
+        return String.valueOf(returnCode);
+    }
 
     private static boolean containsOnlyZeros(ArrayNode arrayNode) {
         for (JsonNode element : arrayNode) {
@@ -239,6 +267,7 @@ public class Json {
     }
     public static String tologinIn(String jsonString) {
         try {
+            System.out.println(jsonString);
             // 创建 Jackson 的 ObjectMapper 实例
             ObjectMapper objectMapper = new ObjectMapper();
 
@@ -248,11 +277,11 @@ public class Json {
             // 检查 returnCode 是否存在
             if (jsonNode.has("returnCode")) {
                 int returnCode = jsonNode.get("returnCode").asInt();
-                // 如果 returnCode 为 1，返回 loginId
-                if (returnCode == 1 && jsonNode.has("loginId")) {
+                // 如果 returnCode 为 1 或 100，并且 loginId 存在，则返回 loginId
+                if ((returnCode == 1) && jsonNode.has("loginId")) {
                     return jsonNode.get("loginId").asText();
                 } else {
-                    // returnCode 不为 1 时返回 returnCode 的值
+                    // returnCode 不为 1 或 100 时，返回 returnCode 的值
                     return String.valueOf(returnCode);
                 }
             }

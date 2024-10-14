@@ -1,8 +1,8 @@
 import Config.Setting;
 import Connect.RemoveLogin;
 import Connect.SendReq;
+import logic.Json;
 import logic.ModifyData;
-import logic.ReturnCode;
 import logic.UserInputUtils;
 
 import java.util.concurrent.*;
@@ -17,25 +17,29 @@ public class Main {
 
         switch (Select) {
             case "1":  // 如果选择1
-                String loginResult = SendReq.Login(Userid, currentTimestamp);
-                if (loginResult.equals("100") || loginResult.equals("1")) {
+                String loginResult = Json.tologinIn(SendReq.Login(Userid, currentTimestamp));
+                System.out.println(loginResult);
+                if (loginResult.matches("\\d+") && loginResult.length() > 10) {
                     System.out.println("登录成功！");
-                    if (ReturnCode.Return(SendReq.Track(Userid,Integer.parseInt(ReturnCode.GetRatting(SendReq.Ratting(Userid))))).equals("1")){
+                    if (Json.Return(SendReq.Track(Userid, Json.GetRatting(SendReq.Ratting(Userid)))).equals("1")){
                         System.out.println("获取成功！");
                     } else {
                         System.out.println("获取失败，或者已有卷");
                     }
-                if (ReturnCode.Return(SendReq.Logout(Userid,currentTimestamp)).equals("1")){
-                    if (ReturnCode.isLogin(SendReq.Ratting(Userid)).equals("0")){    //检查是否退出登录
+                if (Json.Return(SendReq.Logout(Userid,currentTimestamp)).equals("1")){
+                    if (Json.isLogin(SendReq.Ratting(Userid)).equals("0")){    //检查是否退出登录
                         System.out.println("退出登录");
                     } else {
                         System.out.println("未成功退出登录");
                     }
                 }
-                }else if (loginResult.equals("102")) {
-                    System.out.println("请刷新二维码");
-                } else {
-                    System.out.println("登录失败");
+                }else if (loginResult.equals("100")){
+                    System.out.println("警告，你已经登陆现在尝试直接获取");
+                    if (Json.Return(SendReq.Track(Userid, Json.GetRatting(SendReq.Ratting(Userid)))).equals("1")){
+                        System.out.println("获取成功！");
+                    } else {
+                        System.out.println("获取失败，或者已有卷");
+                    }
                 }
                 break;
             case "2":
@@ -55,8 +59,18 @@ public class Main {
                 }
                 break;
             case "3":
-                System.out.println(ModifyData.menu(Userid,currentTimestamp));
-                SendReq.Logout(Userid, currentTimestamp);
+                try {
+                    System.out.println(ModifyData.menu(Userid,currentTimestamp));
+                }catch (Exception e){
+                    SendReq.Logout(Userid, currentTimestamp);
+                    if (Json.Return(SendReq.Logout(Userid,currentTimestamp)).equals("1")){
+                        if (Json.isLogin(SendReq.Ratting(Userid)).equals("0")){    //检查是否退出登录
+                            System.out.println("退出登录");
+                        } else {
+                            System.out.println("未成功退出登录");
+                        }
+                    }
+                }
                 break;
             default:
                 System.out.println("乱输是吧？奖励你关一把小黑屋");
