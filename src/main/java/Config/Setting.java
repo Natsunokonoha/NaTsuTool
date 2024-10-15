@@ -4,9 +4,9 @@ public class Setting {
 
     public static class Api {
         // 内部静态类 Login
-        public static String Login() { return "d1d4e8194631fe932a399fa96483fe7b"; }
+        public static String Login() { return "UserLoginApiMaimaiChn"; }
         public static String ratting() {
-            return "7886b5c1307cdaba12a0c5285c0464f0";
+            return "GetUserPreviewApiMaimaiChn";
         }
         public static String juan() {
             return "949d55efb2ea032f511b97aa153473f7";
@@ -30,6 +30,7 @@ public class Setting {
         public static String IV(){
             return ";;KjR1C3hgB1ovXa";
         }
+        public static String obfuscate(){return "BEs2D5vW";}
     }
 
     public static class ServerConfig {
