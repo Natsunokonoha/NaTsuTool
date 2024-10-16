@@ -62,6 +62,7 @@ public class Main {
                 try {
                     System.out.println(ModifyData.menu(Userid,currentTimestamp));
                 }catch (Exception e){
+                    System.out.println("发生错误！");
                     SendReq.Logout(Userid, currentTimestamp);
                     if (Json.Return(SendReq.Logout(Userid,currentTimestamp)).equals("1")){
                         if (Json.isLogin(SendReq.Ratting(Userid)).equals("0")){    //检查是否退出登录

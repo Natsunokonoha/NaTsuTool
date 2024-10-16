@@ -10,6 +10,7 @@ import Config.Setting;
 
 public class Dispose {
     public static String build(String userId, String Api_Url, String dataToEncrypt) {
+        System.out.println(Api_Url+"+"+dataToEncrypt);
         byte[] plaintext = dataToEncrypt.getBytes(StandardCharsets.UTF_8);
 
         byte[] encryptedData = DecompressionUtils.AESUtils.aesEncrypt(plaintext);

@@ -32,12 +32,12 @@ public class RequestBodyBuilder {
     }
     public static String userExtend(String userId) { return String.format("{\"userId\":%s}", userId); }
     public static String userOption(String userId) { return String.format("{\"userId\":%s}", userId); }
-    public static String userMapList(String userId) { return String.format("{\"userId\":%s,\"nextIndex\":0,\"maxCount\":20}", userId); }
+    public static String userMapList(String userId ,String nextIndex) { return String.format("{\"userId\":"+userId+",\"nextIndex\":"+nextIndex+",\"maxCount\":20}"); }
     public static String userCharacterList(String userId) {
         return String.format("{\"userId\":%s}", userId);
     }
 
     public static String UserAll(String userId, Long currentTimestamp) {
-        return String.format("{\"userId\":%s,\"playlogId\":%s,\"isEventMode\":false,\"isFreePlay\":false,\"upsertUserAll\":{\"userData\":[%s],\"userExtend\":[%s],\"userOption\":[%s],\"userCharacterList\":[],\"userGhost\":[],\"userMapList\":[%s},\"userLoginBonusList\":[],\"userRatingList\":[]}", userId, BuildUserAll.Basic(userId,currentTimestamp), BuildUserAll.userData(userId,currentTimestamp), BuildUserAll.userExtend(userId), BuildUserAll.userOption(userId), BuildUserAll.userMapList(userId));
+        return String.format("{\"userId\":" + userId + ",\"playlogId\":" + BuildUserAll.Basic(userId, currentTimestamp) + ",\"isEventMode\":false,\"isFreePlay\":false,\"upsertUserAll\":{\"userData\":" + BuildUserAll.userData(userId, currentTimestamp) + ",\"userExtend\":[" + BuildUserAll.userExtend(userId) + "],\"userOption\":[" + BuildUserAll.userOption(userId) + "],\"userCharacterList\":[],\"userGhost\":[],\"userMapList\":[]},\"userLoginBonusList\":[],\"userRatingList\":[]}}");
     }
 }

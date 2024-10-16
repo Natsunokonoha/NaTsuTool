@@ -9,18 +9,17 @@ public class Setting {
             return "GetUserPreviewApiMaimaiChn";
         }
         public static String juan() {
-            return "GetGameChargeApiMaimaiChn";
+            return "UpsertUserChargelogApiMaimaiChn";
         }
         public static String logout() {
             return "UserLogoutApiMaimaiChn";
         }
         public static String userData() { return "GetUserDataApiMaimaiChn"; }
-        public static String userExtend() { return "73f95003558d73b3392337a7a86459e4"; }
-        public static String userOption() { return "dc877d2c8fbb9305317ed79e71b48e56"; }
+        public static String userExtend() { return "GetUserExtendApiMaimaiChn"; }
+        public static String userOption() { return "GetUserOptionApiMaimaiChn"; }
         public static String userCharacterList() { return "16768656af052a9a3cd612e3a612a219"; } //旅行伙伴updata
         public static String userItemList() { return "e168a0bcd17a57ce9ce302b4ad9c4713";} //用户物品
-        public static String userMapList() { return "05ee513488df5591935157cc6877399e"; }
-
+        public static String userMapList() { return "GetUserMapApiMaimaiChn"; }
     }
 
     public static class Key {

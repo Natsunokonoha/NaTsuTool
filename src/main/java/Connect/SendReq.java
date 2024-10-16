@@ -25,6 +25,11 @@ public class SendReq {
         return Dispose.build(Userid, Dispose.obfuscate(Setting.Api.userOption()), RequestBodyBuilder.userOption(Userid));
     }
     public static String userMapList(String Userid){
-        return Dispose.build(Userid, Dispose.obfuscate(Setting.Api.userMapList()), RequestBodyBuilder.userMapList(Userid));
+        String[] userMapAll = new String[4];
+        userMapAll[0] = Dispose.build(Userid, Dispose.obfuscate(Setting.Api.userMapList()), RequestBodyBuilder.userMapList(Userid, "0"));
+        userMapAll[1] = Dispose.build(Userid, Dispose.obfuscate(Setting.Api.userMapList()), RequestBodyBuilder.userMapList(Userid, "100005"));
+        userMapAll[2] = Dispose.build(Userid, Dispose.obfuscate(Setting.Api.userMapList()), RequestBodyBuilder.userMapList(Userid, "200054"));
+        userMapAll[3] = Dispose.build(Userid, Dispose.obfuscate(Setting.Api.userMapList()), RequestBodyBuilder.userMapList(Userid, "300058"));
+        return userMapAll[0]+","+userMapAll[1]+","+userMapAll[2]+","+userMapAll[3];
     }
 }
