@@ -17,8 +17,9 @@ public class Setting {
         public static String userData() { return "GetUserDataApiMaimaiChn"; }
         public static String userExtend() { return "GetUserExtendApiMaimaiChn"; }
         public static String userOption() { return "GetUserOptionApiMaimaiChn"; }
+        public static String userRatting() { return "GetUserRatingApiMaimaiChn"; }
         public static String userCharacterList() { return "16768656af052a9a3cd612e3a612a219"; } //旅行伙伴updata
-        public static String userItemList() { return "e168a0bcd17a57ce9ce302b4ad9c4713";} //用户物品
+        public static String userItemList() { return "e168a0bcd17a57ce9ce302b4ad9c4713";} //用户物品updata
         public static String userMapList() { return "GetUserMapApiMaimaiChn"; }
     }
 

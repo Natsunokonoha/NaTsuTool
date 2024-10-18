@@ -76,7 +76,6 @@ public class Json {
             // 创建一个新的有序 Map 来保存字段的顺序
             Map<String, JsonNode> orderedFields = new LinkedHashMap<>();
 
-            // 按你希望的顺序定义字段
             if (jsonObject.has("userData")) {
                 ObjectNode userData = (ObjectNode) jsonObject.get("userData");
 
@@ -87,7 +86,7 @@ public class Json {
                 userData.remove("cmLastEmoneyCredit");
                 userData.remove("cmLastEmoneyBrand");
 
-                // 例如，先处理某些特定字段，再处理其他字段
+                //排序
                 orderedFields.put("accessCode", replaceNullWithEmpty(userData.get("accessCode")));
                 orderedFields.put("userName", replaceNullWithEmpty(userData.get("userName")));
                 orderedFields.put("isNetMember", replaceNullWithEmpty(userData.get("isNetMember")));
@@ -265,6 +264,7 @@ public class Json {
             throw new RuntimeException(e);
         }
     }
+
     public static String tologinIn(String jsonString) {
         try {
             System.out.println(jsonString);
@@ -290,5 +290,21 @@ public class Json {
         }
         // 如果解析过程中出现异常，返回 null
         return null;
+    }
+
+    public static String touserRatting(String jsonString) {
+        try {
+            ObjectMapper mapper = new ObjectMapper();
+            // 将 JSON 字符串转换为 Jackson 的 ObjectNode
+            ObjectNode jsonObject = (ObjectNode) mapper.readTree(jsonString);
+
+            // 获取 userOption 节点
+            JsonNode userOptionNode = jsonObject.get("userRating");
+
+            // 返回 userOption 节点的字符串
+            return userOptionNode.toString();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 }

@@ -48,6 +48,11 @@ public class BuildUserAll {
     public static String userOption(String Userid){
         return Json.touserOption(SendReq.userOption(Userid));
     }
+
+    public static String userRatting(String Userid){
+        return Json.touserRatting(SendReq.userRatting(Userid));
+    }
+
     public static String userMapList(String Userid){
         return Json.touserMapList(SendReq.userMapList(Userid));
     }

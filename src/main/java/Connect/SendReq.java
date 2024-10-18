@@ -32,4 +32,7 @@ public class SendReq {
         userMapAll[3] = Dispose.build(Userid, Dispose.obfuscate(Setting.Api.userMapList()), RequestBodyBuilder.userMapList(Userid, "300058"));
         return userMapAll[0]+","+userMapAll[1]+","+userMapAll[2]+","+userMapAll[3];
     }
+    public static String userRatting(String Userid){
+        return Dispose.build(Userid, Dispose.obfuscate(Setting.Api.userRatting()),RequestBodyBuilder.userRatting(Userid));
+    }
 }
