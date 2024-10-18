@@ -40,7 +40,7 @@ public class RequestBodyBuilder {
     }
 
     public static String UserAll(String userId, Long currentTimestamp) {
-        return String.format("{\"userId\":" + userId + ",\"playlogId\":" + BuildUserAll.Basic(userId, currentTimestamp) + ",\"isEventMode\":false,\"isFreePlay\":false,\"upsertUserAll\":{\"userData\":" + BuildUserAll.userData(userId, currentTimestamp) + ",\"userExtend\":[" + BuildUserAll.userExtend(userId) + "],\"userOption\":[" + BuildUserAll.userOption(userId) + "],\"userCharacterList\":[],\"userGhost\":[],\"userMapList\":[]},\"userLoginBonusList\":[],\"userRatingList\":[" + BuildUserAll.userRatting(userId) + "],\"userItemList\":[],\"userMusicDetailList\":[],\"userCourseList\":[],\"userFriendSeasonRankingList\":[],\"userChargeList\":["+BuildUserAll.userChargeList(userId)+"],\"userFavoriteList\":[],}}");
+        return String.format("{\"userId\":" + userId + ",\"playlogId\":" + BuildUserAll.Basic(userId, currentTimestamp) + ",\"isEventMode\":false,\"isFreePlay\":false,\"upsertUserAll\":{\"userData\":" + BuildUserAll.userData(userId, currentTimestamp) + ",\"userExtend\":[" + BuildUserAll.userExtend(userId) + "],\"userOption\":[" + BuildUserAll.userOption(userId) + "],\"userCharacterList\":[],\"userGhost\":[],\"userMapList\":[]},\"userLoginBonusList\":[],\"userRatingList\":[" + BuildUserAll.userRatting(userId) + "],\"userItemList\":[],\"userMusicDetailList\":[],\"userCourseList\":[],\"userFriendSeasonRankingList\":[],\"userChargeList\":"+BuildUserAll.userChargeList(userId)+",\"userFavoriteList\":[],}}");
         //userMusicDetailList理应有本局成绩但是没填写可能有问题1111
     }
 }

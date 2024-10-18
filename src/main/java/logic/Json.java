@@ -315,7 +315,7 @@ public class Json {
             ObjectNode jsonObject = (ObjectNode) mapper.readTree(jsonString);
 
             // 获取 userOption 节点
-            JsonNode userOptionNode = jsonObject.get("userRating");
+            JsonNode userOptionNode = jsonObject.get("userChargeList");
 
             // 返回 userOption 节点的字符串
             return userOptionNode.toString();

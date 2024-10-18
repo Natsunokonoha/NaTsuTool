@@ -61,16 +61,10 @@ public class Main {
             case "3":
                 try {
                     System.out.println(ModifyData.menu(Userid,currentTimestamp));
+                    loginOut(currentTimestamp, Userid);
                 }catch (Exception e){
                     System.out.println("发生错误！");
-                    SendReq.Logout(Userid, currentTimestamp);
-                    if (Json.Return(SendReq.Logout(Userid,currentTimestamp)).equals("1")){
-                        if (Json.isLogin(SendReq.Ratting(Userid)).equals("0")){    //检查是否退出登录
-                            System.out.println("退出登录");
-                        } else {
-                            System.out.println("未成功退出登录");
-                        }
-                    }
+                    loginOut(currentTimestamp, Userid);
                 }
                 break;
             default:
@@ -78,6 +72,17 @@ public class Main {
                 SendReq.Login(Userid, currentTimestamp);
                 System.out.println(currentTimestamp);
                 break;
+        }
+    }
+
+    private static void loginOut(long currentTimestamp, String userid) {
+        SendReq.Logout(userid, currentTimestamp);
+        if (Json.Return(SendReq.Logout(userid,currentTimestamp)).equals("1")){
+            if (Json.isLogin(SendReq.Ratting(userid)).equals("0")){    //检查是否退出登录
+                System.out.println("退出登录");
+            } else {
+                System.out.println("未成功退出登录");
+            }
         }
     }
 }

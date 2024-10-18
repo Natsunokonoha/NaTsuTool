@@ -36,6 +36,6 @@ public class SendReq {
         return Dispose.build(Userid, Dispose.obfuscate(Setting.Api.userRatting()),RequestBodyBuilder.userRatting(Userid));
     }
     public static String userChargeList(String Userid){
-        return Dispose.build(Userid, Dispose.obfuscate(Setting.Api.userCharacterList()), RequestBodyBuilder.userCharacterList(Userid));
+        return Dispose.build(Userid, Dispose.obfuscate(Setting.Api.userChargeListforTrack()), RequestBodyBuilder.userCharacterList(Userid));
     }
 }
