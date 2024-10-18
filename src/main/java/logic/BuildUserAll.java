@@ -50,7 +50,11 @@ public class BuildUserAll {
     }
 
     public static String userRatting(String Userid){
-        return Json.touserRatting(SendReq.userRatting(Userid));
+        return Json.touserRatting(SendReq.userRatting(Userid)); //udemae参数并未排序1111111
+    }
+
+    public static String userChargeList(String Userid){
+        return Json.touserChargeList(SendReq.userChargeList(Userid));
     }
 
     public static String userMapList(String Userid){
